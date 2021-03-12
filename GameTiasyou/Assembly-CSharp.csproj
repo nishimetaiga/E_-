@@ -63,11 +63,29 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Script\Directional.cs" />
-    <Compile Include="Assets\Script\Player.cs" />
-    <Compile Include="Assets\Script\PlayerControl.cs" />
-    <Compile Include="Assets\Script\fps.cs" />
-    <None Include="Assets\Boats\Read me.txt" />
+    <Compile Include="Assets\nishime\Directional.cs" />
+    <Compile Include="Assets\nishime\Effekseer\Example\EfkBasic.cs" />
+    <Compile Include="Assets\nishime\Effekseer\ScriptsExternal\EffekseerRendererHDRP.cs" />
+    <Compile Include="Assets\nishime\Effekseer\ScriptsExternal\EffekseerRendererLWRP.cs" />
+    <Compile Include="Assets\nishime\Effekseer\ScriptsExternal\EffekseerURPRenderPassFeature.cs" />
+    <Compile Include="Assets\nishime\Effekseer\ScriptsExternal\PostProcessingStackEffekseer.cs" />
+    <Compile Include="Assets\nishime\Effekseer\ScriptsExternal\PostProcessingStackEffekseerAfterStackSettings.cs" />
+    <Compile Include="Assets\nishime\Effekseer\ScriptsExternal\PostProcessingStackEffekseerBeforeStackSettings.cs" />
+    <Compile Include="Assets\nishime\Player.cs" />
+    <Compile Include="Assets\nishime\PlayerControl.cs" />
+    <Compile Include="Assets\nishime\Script\Player_Control.cs" />
+    <Compile Include="Assets\nishime\Script\fps.cs" />
+    <Compile Include="Assets\nishime\Script\inputDemo.cs" />
+    <None Include="Assets\nishime\Effekseer\Materials\GrabDepthShader.shader" />
+    <None Include="Assets\nishime\Effekseer\Materials\StandardModelShader.shader" />
+    <None Include="Assets\nishime\Effekseer\Materials\StandardModelDistortionShader.shader" />
+    <None Include="Assets\nishime\Effekseer\Materials\StandardDistortionShader.shader" />
+    <None Include="Assets\nishime\Effekseer\Materials\StandardLightingShader.shader" />
+    <None Include="Assets\nishime\Effekseer\Materials\Texture2DArrayBlitShader.shader" />
+    <None Include="Assets\nishime\Effekseer\Materials\Texture2DBlitShader.shader" />
+    <None Include="Assets\nishime\Effekseer\Materials\StandardShader.shader" />
+    <None Include="Assets\nishime\Effekseer\Materials\FakeShader.shader" />
+    <None Include="Assets\nishime\Boats\Read me.txt" />
     <Reference Include="UnityEngine">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.18f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>
@@ -624,7 +642,16 @@
       <HintPath>D:/nishime/E_nori/GameTiasyou/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
     </Reference>
   </ItemGroup>
-  <ItemGroup></ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="EffekseerEditor.csproj">
+      <Project>{BD0C5729-7241-7232-6618-0B91EC99CABB}</Project>
+      <Name>EffekseerEditor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Effekseer.csproj">
+      <Project>{72CE30A3-AA1C-2A48-397F-284BBDF09572}</Project>
+      <Name>Effekseer</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
