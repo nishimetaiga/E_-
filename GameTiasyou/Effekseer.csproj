@@ -63,23 +63,23 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\nishime\Effekseer\Scripts\Effekseer.cs" />
-    <Compile Include="Assets\nishime\Effekseer\Scripts\EffekseerEffectAsset.cs" />
-    <Compile Include="Assets\nishime\Effekseer\Scripts\EffekseerEmitter.cs" />
-    <Compile Include="Assets\nishime\Effekseer\Scripts\EffekseerHandle.cs" />
-    <Compile Include="Assets\nishime\Effekseer\Scripts\EffekseerMaterialAsset.cs" />
-    <Compile Include="Assets\nishime\Effekseer\Scripts\EffekseerModelAsset.cs" />
-    <Compile Include="Assets\nishime\Effekseer\Scripts\EffekseerPlayableAsset.cs" />
-    <Compile Include="Assets\nishime\Effekseer\Scripts\EffekseerPlayableBehaviour.cs" />
-    <Compile Include="Assets\nishime\Effekseer\Scripts\EffekseerRenderer.cs" />
-    <Compile Include="Assets\nishime\Effekseer\Scripts\EffekseerRendererNative.cs" />
-    <Compile Include="Assets\nishime\Effekseer\Scripts\EffekseerRendererUnity.cs" />
-    <Compile Include="Assets\nishime\Effekseer\Scripts\EffekseerRuntime.cs" />
-    <Compile Include="Assets\nishime\Effekseer\Scripts\EffekseerSettings.cs" />
-    <Compile Include="Assets\nishime\Effekseer\Scripts\EffekseerSound.cs" />
-    <Compile Include="Assets\nishime\Effekseer\Scripts\EffekseerSystem.cs" />
-    <Compile Include="Assets\nishime\Effekseer\Scripts\StereoRendererUtil.cs" />
-    <None Include="Assets\nishime\Effekseer\Scripts\Effekseer.asmdef" />
+    <Compile Include="Assets\nishime\nishime\Effekseer\Scripts\Effekseer.cs" />
+    <Compile Include="Assets\nishime\nishime\Effekseer\Scripts\EffekseerEffectAsset.cs" />
+    <Compile Include="Assets\nishime\nishime\Effekseer\Scripts\EffekseerEmitter.cs" />
+    <Compile Include="Assets\nishime\nishime\Effekseer\Scripts\EffekseerHandle.cs" />
+    <Compile Include="Assets\nishime\nishime\Effekseer\Scripts\EffekseerMaterialAsset.cs" />
+    <Compile Include="Assets\nishime\nishime\Effekseer\Scripts\EffekseerModelAsset.cs" />
+    <Compile Include="Assets\nishime\nishime\Effekseer\Scripts\EffekseerPlayableAsset.cs" />
+    <Compile Include="Assets\nishime\nishime\Effekseer\Scripts\EffekseerPlayableBehaviour.cs" />
+    <Compile Include="Assets\nishime\nishime\Effekseer\Scripts\EffekseerRenderer.cs" />
+    <Compile Include="Assets\nishime\nishime\Effekseer\Scripts\EffekseerRendererNative.cs" />
+    <Compile Include="Assets\nishime\nishime\Effekseer\Scripts\EffekseerRendererUnity.cs" />
+    <Compile Include="Assets\nishime\nishime\Effekseer\Scripts\EffekseerRuntime.cs" />
+    <Compile Include="Assets\nishime\nishime\Effekseer\Scripts\EffekseerSettings.cs" />
+    <Compile Include="Assets\nishime\nishime\Effekseer\Scripts\EffekseerSound.cs" />
+    <Compile Include="Assets\nishime\nishime\Effekseer\Scripts\EffekseerSystem.cs" />
+    <Compile Include="Assets\nishime\nishime\Effekseer\Scripts\StereoRendererUtil.cs" />
+    <None Include="Assets\nishime\nishime\Effekseer\Scripts\Effekseer.asmdef" />
     <Reference Include="UnityEngine">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.18f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>

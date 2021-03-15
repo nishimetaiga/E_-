@@ -63,14 +63,14 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\nishime\Effekseer\Editor\EffekseerAssetInspector.cs" />
-    <Compile Include="Assets\nishime\Effekseer\Editor\EffekseerAssetPostProcessor.cs" />
-    <Compile Include="Assets\nishime\Effekseer\Editor\EffekseerEditor.cs" />
-    <Compile Include="Assets\nishime\Effekseer\Editor\EffekseerEmitterEditor.cs" />
-    <Compile Include="Assets\nishime\Effekseer\Editor\EffekseerPluginSwitcher.cs" />
-    <Compile Include="Assets\nishime\Effekseer\Editor\EffekseerSystemEditor.cs" />
-    <Compile Include="Assets\nishime\Effekseer\Editor\EffekseerTool.cs" />
-    <None Include="Assets\nishime\Effekseer\Editor\EffekseerEditor.asmdef" />
+    <Compile Include="Assets\nishime\nishime\Effekseer\Editor\EffekseerAssetInspector.cs" />
+    <Compile Include="Assets\nishime\nishime\Effekseer\Editor\EffekseerAssetPostProcessor.cs" />
+    <Compile Include="Assets\nishime\nishime\Effekseer\Editor\EffekseerEditor.cs" />
+    <Compile Include="Assets\nishime\nishime\Effekseer\Editor\EffekseerEmitterEditor.cs" />
+    <Compile Include="Assets\nishime\nishime\Effekseer\Editor\EffekseerPluginSwitcher.cs" />
+    <Compile Include="Assets\nishime\nishime\Effekseer\Editor\EffekseerSystemEditor.cs" />
+    <Compile Include="Assets\nishime\nishime\Effekseer\Editor\EffekseerTool.cs" />
+    <None Include="Assets\nishime\nishime\Effekseer\Editor\EffekseerEditor.asmdef" />
     <Reference Include="UnityEngine">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.18f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>
