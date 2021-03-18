@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/yamanoha/Scenes/SampleScene.unity
+- path: Assets/sinzato/Scenes/Main.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0

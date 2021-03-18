@@ -4,22 +4,11 @@ using UnityEngine;
 
 public class NewBehaviourScript : MonoBehaviour
 {
-   public float speed;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-
+    void OnCollisionStay(Collision other) {
+        if (other.gameObject.tag == "teki") {
+            Destroy(other.gameObject);
+        }
     }
 
-    // Update is called once per frame
-    void Update()
-    {
 
-
-        //キャラクターをワールド座標で動かす
-        //transform.eulerAngles += new Vector3(0f, 0f, speed * Time.deltaTime);               //旋回用
-       //transform.position += -transform.up *speed * Time.deltaTime;    //発進
-
-    }
 }

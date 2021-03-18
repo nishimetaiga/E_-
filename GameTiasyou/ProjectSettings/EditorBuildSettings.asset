@@ -4,5 +4,8 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/sinzato/Scenes/Main.unity
+    guid: 5c55b6f05bd255f42ab97f1e7455d830
   m_configObjects: {}
