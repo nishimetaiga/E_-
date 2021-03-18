@@ -43,8 +43,8 @@ MonoBehaviour:
     y: 0
     width: 438
     height: 455
-  m_MinSize: {x: 100, y: 100}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 102, y: 121}
+  m_MaxSize: {x: 4002, y: 4021}
   m_ActualView: {fileID: 14}
   m_Panes:
   - {fileID: 14}
@@ -97,10 +97,10 @@ MonoBehaviour:
     y: 30
     width: 1536
     height: 731
-  m_MinSize: {x: 679, y: 492}
-  m_MaxSize: {x: 16004, y: 14042}
+  m_MinSize: {x: 681, y: 492}
+  m_MaxSize: {x: 16006, y: 14042}
   vertical: 0
-  controlID: 137
+  controlID: 158
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -268,10 +268,10 @@ MonoBehaviour:
     y: 0
     width: 1058
     height: 731
-  m_MinSize: {x: 403, y: 492}
-  m_MaxSize: {x: 12003, y: 14042}
+  m_MinSize: {x: 405, y: 492}
+  m_MaxSize: {x: 12005, y: 14042}
   vertical: 1
-  controlID: 152
+  controlID: 117
 --- !u!114 &12
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -294,10 +294,10 @@ MonoBehaviour:
     y: 0
     width: 1058
     height: 455
-  m_MinSize: {x: 403, y: 221}
-  m_MaxSize: {x: 12003, y: 4021}
+  m_MinSize: {x: 405, y: 221}
+  m_MaxSize: {x: 12005, y: 4021}
   vertical: 0
-  controlID: 80
+  controlID: 118
 --- !u!114 &13
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -334,9 +334,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 2.7510517, y: 5.814166, z: -782.04755}
+    m_Target: {x: 2.3478603, y: 3.080308, z: -782.7141}
     speed: 2
-    m_Value: {x: 2.7510517, y: 5.814166, z: -782.04755}
+    m_Value: {x: 2.3478603, y: 3.080308, z: -782.7141}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -382,13 +382,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
+    m_Target: {x: 0.24512064, y: -0.66326267, z: 0.245121, w: 0.66326296}
     speed: 2
-    m_Value: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
+    m_Value: {x: 0.24512021, y: -0.6632615, z: 0.24512057, w: 0.6632618}
   m_Size:
-    m_Target: 486.77628
+    m_Target: 4.6124096
     speed: 2
-    m_Value: 486.77628
+    m_Value: 4.6124096
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -471,8 +471,8 @@ MonoBehaviour:
     m_VAllowExceedBaseRangeMin: 1
     m_VAllowExceedBaseRangeMax: 1
     m_ScaleWithWindow: 0
-    m_HSlider: 0
-    m_VSlider: 0
+    m_HSlider: 1
+    m_VSlider: 1
     m_IgnoreScrollWheelUntilClicked: 0
     m_EnableMouseInput: 1
     m_EnableSliderZoomHorizontal: 0
@@ -485,18 +485,18 @@ MonoBehaviour:
       y: 21
       width: 436
       height: 413
-    m_Scale: {x: 1, y: 1}
-    m_Translation: {x: 218, y: 206.5}
+    m_Scale: {x: 1.092727, y: 1.092727}
+    m_Translation: {x: 228.10725, y: 196.16095}
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
-      x: -218
-      y: -206.5
-      width: 436
-      height: 413
+      x: -208.75046
+      y: -179.51506
+      width: 399.00177
+      height: 377.95352
     m_MinimalGUI: 1
   m_defaultScale: 1
   m_LastWindowPixelSize: {x: 545, y: 542.5}
@@ -544,20 +544,20 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/nishime/Script
+    - Assets/nishime/Scene
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/nishime/Script
+  - Assets/nishime/Scene
   m_LastFoldersGridSize: -1
   m_LastProjectPath: D:\nishime\E_nori\GameTiasyou
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 95}
-    m_SelectedIDs: 52360000
-    m_LastClickedID: 13906
-    m_ExpandedIDs: 00000000f6330000003400000c360000123600003a36000052360000623600000e3a000000ca9a3b
+    scrollPos: {x: 0, y: 53}
+    m_SelectedIDs: 5a380000
+    m_LastClickedID: 14426
+    m_ExpandedIDs: 00000000463800004c380000503800005838000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -585,7 +585,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000f6330000
+    m_ExpandedIDs: 0000000046380000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -708,20 +708,20 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 283b0000
-      m_LastClickedID: 15144
-      m_ExpandedIDs: eeeefffffcf5ffff2cf6ffff34f7ffff62f7ffff08faffff28faffffcefaffffca390000283b0000
+      m_SelectedIDs: c6ddffff
+      m_LastClickedID: -8762
+      m_ExpandedIDs: fedeffff7ee2ffff14eeffff1cf0ffffd0370000483d0000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: Boat_4
-        m_OriginalName: Boat_4
+        m_Name: Playerobj
+        m_OriginalName: Playerobj
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
           y: 0
           width: 0
           height: 0
-        m_UserData: -5076
+        m_UserData: 16164
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
         m_OriginalEventType: 0

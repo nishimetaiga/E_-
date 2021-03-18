@@ -65,8 +65,42 @@
   <ItemGroup>
     <Compile Include="Assets\nishime\Script\Player.cs" />
     <Compile Include="Assets\nishime\Script\boat.cs" />
+    <Compile Include="Assets\nishime\Script\bullet.cs" />
+    <Compile Include="Assets\nishime\Script\dkko.cs" />
     <Compile Include="Assets\nishime\Script\fps.cs" />
+    <Compile Include="Assets\nishime\Script\sln.cs" />
+    <Compile Include="Assets\nishime\Script\tama.cs" />
+    <Compile Include="Assets\nishime\VolumetricLines\BuiltInRenderPipeline\ExampleScenes\ExampleScripts\CannonBehavior.cs" />
+    <Compile Include="Assets\nishime\VolumetricLines\BuiltInRenderPipeline\ExampleScenes\ExampleScripts\CreateSinShapedLineStrip.cs" />
+    <Compile Include="Assets\nishime\VolumetricLines\BuiltInRenderPipeline\ExampleScenes\ExampleScripts\ShotBehavior.cs" />
+    <Compile Include="Assets\nishime\VolumetricLines\BuiltInRenderPipeline\ExampleScenes\ExampleScripts\VolumetricMultiLineBehavior.cs" />
+    <Compile Include="Assets\nishime\VolumetricLines\Scripts\VolumetricLineBehavior.cs" />
+    <Compile Include="Assets\nishime\VolumetricLines\Scripts\VolumetricLineStripBehavior.cs" />
+    <Compile Include="Assets\nishime\VolumetricLines\Scripts\VolumetricLineVertexData.cs" />
+    <None Include="Assets\nishime\VolumetricLines\BuiltInRenderPipeline\Shaders\_LineStripShader.cginc" />
+    <None Include="Assets\oshiro\VRWaterShader2\Readme.txt" />
+    <None Include="Assets\oshiro\VRWaterShader2\VRWaterShader(legacy)\Shaders\ZWrite Standard.shader" />
+    <None Include="Assets\oshiro\VRWaterShader2\VRWaterShader(legacy)\Shaders\GLES30\ZWrite Standard.shader" />
+    <None Include="Assets\oshiro\VRWaterShader2\Shaders\VRWSShadowCaster.cginc" />
+    <None Include="Assets\nishime\VolumetricLines\BuiltInRenderPipeline\Shaders\LineStrip-TextureAlphaBlended.shader" />
+    <None Include="Assets\oshiro\VRWaterShader2\VRWaterShader(legacy)\Shaders\Standard.shader" />
+    <None Include="Assets\oshiro\VRWaterShader2\VRWaterShader(legacy)\Readme_ja.txt" />
+    <None Include="Assets\nishime\VolumetricLines\BuiltInRenderPipeline\Shaders\SingleLine-TextureAdditive.shader" />
+    <None Include="Assets\oshiro\VRWaterShader2\Shaders\Standard.shader" />
+    <None Include="Assets\nishime\VolumetricLines\BuiltInRenderPipeline\Shaders\_SingleLineShader.cginc" />
+    <None Include="Assets\nishime\VolumetricLines\BuiltInRenderPipeline\Shaders\LineStrip-TextureAdditive.shader" />
+    <None Include="Assets\oshiro\VRWaterShader2\Shaders\VRWSCore.cginc" />
+    <None Include="Assets\oshiro\VRWaterShader2\VRWaterShader(legacy)\Shaders\ZWrite Double Sided.shader" />
+    <None Include="Assets\oshiro\VRWaterShader2\VRWaterShader(legacy)\Shaders\Double Sided.shader" />
+    <None Include="Assets\oshiro\VRWaterShader2\VRWaterShader(legacy)\Shaders\GLES30\Standard.shader" />
+    <None Include="Assets\oshiro\VRWaterShader2\VRWaterShader(legacy)\Shaders\GLES30\ZWrite Double Sided.shader" />
+    <None Include="Assets\nishime\VolumetricLines\BuiltInRenderPipeline\Shaders\SingleLine-TextureAlphaBlended.shader" />
+    <None Include="Assets\oshiro\VRWaterShader2\VRWaterShader(legacy)\Shaders\GLES30\Double Sided.shader" />
+    <None Include="Assets\nishime\VolumetricLines\BuiltInRenderPipeline\Shaders\LineStrip-LightSaber.shader" />
     <None Include="Assets\nishime\Prefab\Boats\Read me.txt" />
+    <None Include="Assets\oshiro\VRWaterShader2\Shaders\VRWSTess.cginc" />
+    <None Include="Assets\nishime\VolumetricLines\BuiltInRenderPipeline\Shaders\SingleLine-LightSaber.shader" />
+    <None Include="Assets\oshiro\VRWaterShader2\VRWaterShader(legacy)\Readme.txt" />
     <Reference Include="UnityEngine">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.18f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>
@@ -598,6 +632,9 @@
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>D:/nishime/E_nori/GameTiasyou/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
+    <Reference Include="Cinemachine">
+      <HintPath>D:/nishime/E_nori/GameTiasyou/Library/ScriptAssemblies/Cinemachine.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.VSCode.Editor">
       <HintPath>D:/nishime/E_nori/GameTiasyou/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
     </Reference>
@@ -616,17 +653,14 @@
     <Reference Include="Unity.Rider.Editor">
       <HintPath>D:/nishime/E_nori/GameTiasyou/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
     </Reference>
+    <Reference Include="com.unity.cinemachine.editor">
+      <HintPath>D:/nishime/E_nori/GameTiasyou/Library/ScriptAssemblies/com.unity.cinemachine.editor.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.TextMeshPro">
       <HintPath>D:/nishime/E_nori/GameTiasyou/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.UI">
       <HintPath>D:/nishime/E_nori/GameTiasyou/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
-    </Reference>
-    <Reference Include="Cinemachine">
-      <HintPath>D:/nishime/E_nori/GameTiasyou/Library/ScriptAssemblies/Cinemachine.dll</HintPath>
-    </Reference>
-    <Reference Include="com.unity.cinemachine.editor">
-      <HintPath>D:/nishime/E_nori/GameTiasyou/Library/ScriptAssemblies/com.unity.cinemachine.editor.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup></ItemGroup>
