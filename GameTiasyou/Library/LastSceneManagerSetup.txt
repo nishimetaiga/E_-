@@ -1,9 +1,5 @@
 sceneSetups:
-- path: Assets/sinzato/scene/shinzato.unity
+- path: Assets/yamanoha/Scenes/SampleScene.unity
   isLoaded: 1
   isActive: 1
-  isSubScene: 0
-- path: Assets/nishime/Scene/nishime.unity
-  isLoaded: 1
-  isActive: 0
   isSubScene: 0
