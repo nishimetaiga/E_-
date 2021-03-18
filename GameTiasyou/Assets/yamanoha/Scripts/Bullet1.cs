@@ -4,15 +4,29 @@ using UnityEngine;
 
 public class Bullet1 : MonoBehaviour
 {
-
+    /// <summary>
+    /// アタッチされている GameObject を取得するためのオブジェクト
+    /// </summary>
     private GameObject uroboros = null;
+
+    /// <summary>
+    /// 攻撃用オブジェクトの実体化に使うプレハブを格納する
+    /// </summary>
     public GameObject curtainPrefab = null;
-    //public float attackSpeed;
+
+    /// <summary>
+    /// 生成した攻撃用オブジェクトをまとめるリスト
+    /// </summary>
     private List<GameObject> bulletList = new List<GameObject>();
+
+    /// <summary>
+    /// 攻撃用オブジェクト
+    /// </summary>
     private GameObject enemyBullet = null;
 
     private void Start()
     {
+        // スクリプトがアタッチされている GameObject を格納
         uroboros = GameObject.Find("LaunchPort");
     }
 
@@ -21,11 +35,12 @@ public class Bullet1 : MonoBehaviour
     /// </summary>
     public void AttackStart()
     {
+        // 弾幕のモーションを始動
         StartCoroutine(GenerateCurtainBullet());
     }
 
     /// <summary>
-    /// カーテン型の弾幕を生成する
+    /// カーテン型の弾を生成する
     /// </summary>
     /// <returns></returns>
     public IEnumerator GenerateCurtainBullet()
@@ -65,31 +80,31 @@ public class Bullet1 : MonoBehaviour
     IEnumerator DeformCurtainBullet()
     {
         // 縦の変化量
-        const float extendSpeedY = 0.05f;
+        const float bulletSpeedY = 0.05f;
         // 横の変化量
-        const float extendSpeedX = 0.05f;
+        const float bulletSpeedX = 0.05f;
         // 縦に伸ばす量
-        const float specifiedValuY = 5f;
+        const float specifiedValueY = 5f;
         // 横に伸ばす量
-        const float specifiedValuX = 10f;
+        const float specifiedValueX = 10f;
 
         // カーテン型の攻撃を縦に伸ばす
         while (true)
         {
             // リストに入っているオブジェクトのスケールを徐々に変更する
             for(int count = 0; count < bulletList.Count; count++) {
-                // カーテンを extendSpeedY ずつ縦に伸ばす
+                // カーテンを bulletSpeedY ずつ縦に伸ばす
                 bulletList[count].transform.localScale 
-                    = new Vector3(bulletList[count].transform.localScale.x, bulletList[count].transform.localScale.y + extendSpeedY, bulletList[count].transform.localScale.z);
+                    = new Vector3(bulletList[count].transform.localScale.x, bulletList[count].transform.localScale.y + bulletSpeedY, bulletList[count].transform.localScale.z);
 
 
                 // 伸ばした分だけ下に移動させる
                 bulletList[count].transform.position
-                    = new Vector3(bulletList[count].transform.position.x, bulletList[count].transform.position.y - extendSpeedY * 1.0f, bulletList[count].transform.position.z);
+                    = new Vector3(bulletList[count].transform.position.x, bulletList[count].transform.position.y - bulletSpeedY * 1.0f, bulletList[count].transform.position.z);
             }
 
             // リストの最後の要素が一定の値になったら処理を抜ける
-            if (bulletList[bulletList.Count - 1].transform.localScale.y >= specifiedValuY)
+            if (bulletList[bulletList.Count - 1].transform.localScale.y >= specifiedValueY)
                 break;
 
             // 1フレームずつ処理が行われる
@@ -105,24 +120,24 @@ public class Bullet1 : MonoBehaviour
             for (int count = 0; count < bulletList.Count; count++)
             {
                 // 横に伸びる前と後の変化率を求める
-                float variationRatio = (extendSpeedX / transform.localScale.x + extendSpeedX % transform.localScale.x) * 0.5f;
+                float variationRatio = (bulletSpeedX / transform.localScale.x + bulletSpeedX % transform.localScale.x) * 0.5f;
 
                 // カーテンを extendSpeedX ずつ横に伸ばす
                 bulletList[count].transform.localScale
-                    = new Vector3(bulletList[count].transform.localScale.x+ extendSpeedX, bulletList[count].transform.localScale.y, bulletList[count].transform.localScale.z);
+                    = new Vector3(bulletList[count].transform.localScale.x+ bulletSpeedX, bulletList[count].transform.localScale.y, bulletList[count].transform.localScale.z);
 
                 // 伸ばした分だけ外側に移動させる
                 bulletList[count].transform.position
                     //= new Vector3(bulletList[count].transform.position.x + bulletList[count].transform.position.x * variationRatio * 0.1f,
                     //bulletList[count].transform.position.y,
                     //bulletList[count].transform.position.z + bulletList[count].transform.position.z * variationRatio * 0.1f);
-                    = new Vector3(bulletList[count].transform.position.x + extendSpeedX * Mathf.Cos(Mathf.PI / 6 *(count + 1)),
+                    = new Vector3(bulletList[count].transform.position.x + bulletSpeedX * Mathf.Cos(Mathf.PI / 6 *(count + 1)),
                     bulletList[count].transform.position.y,
-                    bulletList[count].transform.position.z + extendSpeedX * Mathf.Sin(Mathf.PI / 6 * (count + 1)));
+                    bulletList[count].transform.position.z + bulletSpeedX * Mathf.Sin(Mathf.PI / 6 * (count + 1)));
             }
 
             // リストの最後の要素が一定の値になったら処理を抜ける
-            if (bulletList[bulletList.Count - 1].transform.localScale.x >= specifiedValuX)
+            if (bulletList[bulletList.Count - 1].transform.localScale.x >= specifiedValueX)
                 break;
 
             // 1フレームずつ処理が行われる
@@ -139,11 +154,11 @@ public class Bullet1 : MonoBehaviour
             for (int count = 0; count < bulletList.Count; count++)
             {
                 // 横に伸びる前と後の変化率を求める
-                float variationRatio = (extendSpeedX / transform.localScale.x + extendSpeedX % transform.localScale.x) * 0.5f;
+                float variationRatio = (bulletSpeedX / transform.localScale.x + bulletSpeedX % transform.localScale.x) * 0.5f;
 
                 // カーテンを extendSpeedX ずつ横に縮める
                 bulletList[count].transform.localScale
-                    = new Vector3(bulletList[count].transform.localScale.x - extendSpeedX, bulletList[count].transform.localScale.y, bulletList[count].transform.localScale.z);
+                    = new Vector3(bulletList[count].transform.localScale.x - bulletSpeedX, bulletList[count].transform.localScale.y, bulletList[count].transform.localScale.z);
 
                 // 縮めた分だけ外側に移動させる
                 bulletList[count].transform.position
@@ -163,7 +178,6 @@ public class Bullet1 : MonoBehaviour
         // 攻撃が終了したオブジェクトを消去する
         DeleteCurtainBullet();
 
-        // コルーチンの終了
         yield break;
         
     }
@@ -174,12 +188,15 @@ public class Bullet1 : MonoBehaviour
     /// <returns></returns>
     void DeleteCurtainBullet()
     {
+        // 使用済みのオブジェクトを破壊
         foreach(var obj in bulletList)
         {
             Destroy(obj);
         }
+        // リストのクリア
         bulletList.Clear();
 
+        // クールタイム開始
         StartCoroutine(uroboros.GetComponent<UroborosAttackMothion>().AttackFinishReceiver());
     }
 }

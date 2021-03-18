@@ -23,7 +23,9 @@ public class UroborosAttackMothion : MonoBehaviour
     {
         if (attackFlg == false )
         {
-            attackCourtain.GetComponent<Bullet1>().AttackStart();
+            //attackCourtain.GetComponent<Bullet1>().AttackStart();
+            attackCourtain.GetComponent<Bullet2>().AttackStart();
+
             attackFlg = true;
         }
 
