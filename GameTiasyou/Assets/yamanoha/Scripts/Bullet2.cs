@@ -127,9 +127,9 @@ public class Bullet2 : MonoBehaviour
         // 横の変化量
         const float bulletSpeedX = 0.07f;
         // 移動限界地点
-        const float specifiedValueY = 1f;
+        const float moveLimitValueY = 0f;
         // 移動限界距離
-        const float specifiedValueX = 20f;
+        const float specifiedValueX = 40f;
         // 現在の移動量
         float bulletMoveMentAmount = 0;
 
@@ -144,7 +144,7 @@ public class Bullet2 : MonoBehaviour
             }
 
             // リストの最後の要素が一定の値になったら処理を抜ける
-            if (bulletList[bulletList.Count - 1].transform.position.y + bulletList[bulletList.Count - 1].transform.localScale.y * 0.5 <= specifiedValueY)
+            if (bulletList[bulletList.Count - 1].transform.position.y - bulletList[bulletList.Count - 1].transform.localScale.y * 0.5 <= moveLimitValueY)
                 break;
 
             // 1フレームずつ処理が行われる
