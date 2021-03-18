@@ -6,12 +6,16 @@ public class UroborosAttackMothion : MonoBehaviour
 {
     private GameObject attackCourtain;
     private bool attackFlg; // ウロボロスが攻撃中か判断する　true:攻撃中  false:否
+    int coolTimeCount;  // ウロボロスが攻撃しない時間帯
+    int timecount;
 
     // Start is called before the first frame update
     void Start()
     {
         attackCourtain = GameObject.Find("LaunchPort");
         attackFlg = false;
+        timecount = 0;
+        //attack.GetComponent<Bullet1>().AttackStart();
     }
 
     // Update is called once per frame
@@ -19,14 +23,15 @@ public class UroborosAttackMothion : MonoBehaviour
     {
         if (attackFlg == false )
         {
-            var attackPaternChoice = Random.value;
-            if(attackPaternChoice < 0.4)
-                attackCourtain.GetComponent<Bullet1>().AttackStart();
-            else 
-                attackCourtain.GetComponent<Bullet2>().AttackStart();
+            //attackCourtain.GetComponent<Bullet1>().AttackStart();
+            attackCourtain.GetComponent<Bullet2>().AttackStart();
 
             attackFlg = true;
         }
+
+        //if (timecount > 60) break;
+
+        //timecount++;
     }
 
     /// <summary>

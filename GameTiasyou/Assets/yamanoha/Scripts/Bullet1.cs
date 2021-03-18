@@ -83,10 +83,10 @@ public class Bullet1 : MonoBehaviour
         const float bulletSpeedY = 0.05f;
         // 横の変化量
         const float bulletSpeedX = 0.05f;
-        // 移動限界距離
-        const float moveLimitValueY = 0f;
+        // 縦に伸ばす量
+        const float specifiedValueY = 5f;
         // 横に伸ばす量
-        const float specifiedValueX = 30f;
+        const float specifiedValueX = 10f;
 
         // カーテン型の攻撃を縦に伸ばす
         while (true)
@@ -104,7 +104,7 @@ public class Bullet1 : MonoBehaviour
             }
 
             // リストの最後の要素が一定の値になったら処理を抜ける
-            if (bulletList[bulletList.Count - 1].transform.position.y - bulletList[bulletList.Count - 1].transform.localScale.y * 0.5 <= moveLimitValueY)
+            if (bulletList[bulletList.Count - 1].transform.localScale.y >= specifiedValueY)
                 break;
 
             // 1フレームずつ処理が行われる
