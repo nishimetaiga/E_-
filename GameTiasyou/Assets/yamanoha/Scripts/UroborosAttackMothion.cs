@@ -19,7 +19,7 @@ public class UroborosAttackMothion : MonoBehaviour
     {
         if (attackFlg == false )
         {
-            var attackPaternChoice = 0.2f;//Random.value;
+            var attackPaternChoice = /*0.2f;*/Random.value;
             if(attackPaternChoice < 0.4)
                 attackCourtain.GetComponent<Bullet1>().AttackStart();
             else 
@@ -34,7 +34,7 @@ public class UroborosAttackMothion : MonoBehaviour
     /// </summary>
     public IEnumerator AttackFinishReceiver()
     {
-        yield return new WaitForSeconds(Random.Range(3f, 10f));
+        yield return new WaitForSeconds(Random.Range(1f, 5f));
         attackFlg = false;
     }
 }

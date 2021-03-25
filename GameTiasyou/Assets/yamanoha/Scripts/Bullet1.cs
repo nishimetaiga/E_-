@@ -64,8 +64,8 @@ public class Bullet1 : MonoBehaviour
                 // 生成した enemyBullet をリスト化する
                 bulletList.Add(enemyBullet);
 
-                // 処理の間隔を 0.25 秒あける
-                yield return new WaitForSeconds(0.25f);
+                // 処理の間隔を 0.05 秒あける
+                yield return new WaitForSeconds(0.05f);
             }
 
             // コルーチンの終了、次のコルーチンの呼び出し
@@ -80,9 +80,9 @@ public class Bullet1 : MonoBehaviour
     IEnumerator DeformCurtainBullet()
     {
         // 縦の変化量
-        const float bulletSpeedY = 0.05f;
+        const float bulletSpeedY = 0.1f;
         // 横の変化量
-        const float bulletSpeedX = 0.05f;
+        const float bulletSpeedX = 0.3f;
         // 移動限界距離
         const float moveLimitValueY = 0f;
         // 横に伸ばす量

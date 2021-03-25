@@ -53,26 +53,30 @@ public class Bullet2 : MonoBehaviour
     public IEnumerator GenerateSphereBullet()
     {
         {
-            var num = 0;
+            var sphereNum = 0;
             float radius = 5;
+            float ringSize = spherePrefab.transform.localScale.x + 5;
 
-            for (float angle = 0 ; angle < Mathf.PI * 2; angle += Mathf.PI / 8)
+            for (int ringNum = 0; ringNum < 3; ringNum++)
             {
-                num++;
-                // 攻撃用オブジェクトの生成
-                enemyBullet = Instantiate(spherePrefab, new Vector3(radius * Mathf.Cos(angle), transform.position.y, radius * Mathf.Sin(angle)), Quaternion.Euler(0, -22.5f * num, 0));
+                for (float angle = 0; angle < Mathf.PI * 2; angle += Mathf.PI / 8)
+                {
+                    sphereNum++;
+                    // 攻撃用オブジェクトの生成
+                    enemyBullet = Instantiate(spherePrefab, new Vector3((radius + ringSize * ringNum) * Mathf.Cos(angle), transform.position.y - 5, (radius + ringSize * ringNum) * Mathf.Sin(angle)), Quaternion.Euler(0, -22.5f * sphereNum, 0));
 
-                // 生成した enemyBullet の親オブジェクトにアタッチしているこのオブジェクトを指定
-                enemyBullet.transform.parent = this.transform;
+                    // 生成した enemyBullet の親オブジェクトにアタッチしているこのオブジェクトを指定
+                    enemyBullet.transform.parent = this.transform;
 
-                // 生成したオブジェクトの名付け
-                enemyBullet.name = "enemyBullet" + num;
+                    // 生成したオブジェクトの名付け
+                    enemyBullet.name = "enemyBullet" + sphereNum;
 
-                // 生成した enemyBullet をリスト化する
-                bulletList.Add(enemyBullet);
+                    // 生成した enemyBullet をリスト化する
+                    bulletList.Add(enemyBullet);
 
-                // 処理の間隔を 0.25 秒あける
-                yield return new WaitForSeconds(0.25f);
+                    // 処理の間隔を 0.05 秒あける
+                    yield return new WaitForSeconds(0.05f);
+                }
             }
 
             // コルーチンの終了、次のコルーチンの呼び出し
@@ -123,13 +127,13 @@ public class Bullet2 : MonoBehaviour
     IEnumerator MoveSphereBullet()
     {
         // 縦の変化量
-        const float bulletSpeedY = 0.03f;
+        const float bulletSpeedY = 0.5f;
         // 横の変化量
-        const float bulletSpeedX = 0.07f;
+        const float bulletSpeedX = 0.7f;
         // 移動限界地点
-        const float moveLimitValueY = 0f;
+        Transform moveLimitValueY = GameObject.Find("Field Cube").transform;
         // 移動限界距離
-        const float specifiedValueX = 40f;
+        const float specifiedValueX = 110f;
         // 現在の移動量
         float bulletMoveMentAmount = 0;
 
@@ -144,7 +148,8 @@ public class Bullet2 : MonoBehaviour
             }
 
             // リストの最後の要素が一定の値になったら処理を抜ける
-            if (bulletList[bulletList.Count - 1].transform.position.y - bulletList[bulletList.Count - 1].transform.localScale.y * 0.5 <= moveLimitValueY)
+            if (bulletList[bulletList.Count - 1].transform.position.y - bulletList[bulletList.Count - 1].transform.localScale.y * 0.5 
+                <= moveLimitValueY.position.y + moveLimitValueY.localScale.y)
                 break;
 
             // 1フレームずつ処理が行われる
