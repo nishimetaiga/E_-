@@ -64,8 +64,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\nishime\Script\Player.cs" />
+    <Compile Include="Assets\nishime\Script\Player_contlor.cs" />
     <Compile Include="Assets\nishime\Script\boat.cs" />
     <Compile Include="Assets\nishime\Script\fps.cs" />
+    <Compile Include="Assets\oshiro\StageTest\DeleteFloor.cs" />
+    <Compile Include="Assets\oshiro\StageTest\TesttCameraPosition.cs" />
+    <Compile Include="Assets\sinzato\Script\StartScene.cs" />
     <Compile Include="Assets\yamanoha\Scripts\Bullet1.cs" />
     <Compile Include="Assets\yamanoha\Scripts\Bullet2.cs" />
     <Compile Include="Assets\yamanoha\Scripts\UroborosAttackMothion.cs" />
@@ -614,6 +618,7 @@
       <HintPath>C:/Program Files/2019.4.18f1/Editor/Data/NetStandard/compat/2.0.0/shims/netfx/System.Xml.Serialization.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Timeline.Editor">
+<<<<<<< HEAD
       <HintPath>D:/JGA2021/JGA2021_ETeam/GameTiasyou/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Cinemachine">
@@ -645,6 +650,39 @@
     </Reference>
     <Reference Include="UnityEditor.UI">
       <HintPath>D:/JGA2021/JGA2021_ETeam/GameTiasyou/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+=======
+      <HintPath>D:/backup_gametaisyou/GameTiasyou/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Cinemachine">
+      <HintPath>D:/backup_gametaisyou/GameTiasyou/Library/ScriptAssemblies/Cinemachine.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.VSCode.Editor">
+      <HintPath>D:/backup_gametaisyou/GameTiasyou/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.TextMeshPro.Editor">
+      <HintPath>D:/backup_gametaisyou/GameTiasyou/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UI">
+      <HintPath>D:/backup_gametaisyou/GameTiasyou/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Timeline">
+      <HintPath>D:/backup_gametaisyou/GameTiasyou/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.CollabProxy.Editor">
+      <HintPath>D:/backup_gametaisyou/GameTiasyou/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Rider.Editor">
+      <HintPath>D:/backup_gametaisyou/GameTiasyou/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="com.unity.cinemachine.editor">
+      <HintPath>D:/backup_gametaisyou/GameTiasyou/Library/ScriptAssemblies/com.unity.cinemachine.editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.TextMeshPro">
+      <HintPath>D:/backup_gametaisyou/GameTiasyou/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.UI">
+      <HintPath>D:/backup_gametaisyou/GameTiasyou/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+>>>>>>> 8dceb010c4f1414d335ca24296e54fa9869cae4c
     </Reference>
   </ItemGroup>
   <ItemGroup></ItemGroup>

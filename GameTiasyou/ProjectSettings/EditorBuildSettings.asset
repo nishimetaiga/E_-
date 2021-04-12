@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/sinzato/Scenes/Main.unity
-    guid: 5c55b6f05bd255f42ab97f1e7455d830
+    path: Assets/Game/TitleScene.unity
+    guid: c7b8b0caae9fbbb4b9bf9011241d6b62
+  - enabled: 1
+    path: Assets/Game/main.unity
+    guid: 162793688602ad6478347cb7618be762
   m_configObjects: {}
