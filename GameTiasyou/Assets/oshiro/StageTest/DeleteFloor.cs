@@ -6,8 +6,13 @@ public class DeleteFloor : MonoBehaviour
 {
     private Vector3 tmp;
     public GameObject FloorObj;
-    private void Start()
+    //private void Start()
+    //{
+    //    tmp = this.transform.position;
+    //}
+     void Update()
     {
+
         tmp = this.transform.position;
     }
     private void OnTriggerEnter(Collider other)
@@ -16,7 +21,7 @@ public class DeleteFloor : MonoBehaviour
         if (other.gameObject.tag == "Player")
         {
             Debug.Log("すり抜けた！");
-            Instantiate(FloorObj, new Vector3(tmp.x, tmp.y, tmp.z - 50.0F), Quaternion.identity);
+            Instantiate(FloorObj, new Vector3(tmp.x, tmp.y, tmp.z - 49.0F), Quaternion.identity);
         }
     }
     private void OnTriggerExit(Collider other)
