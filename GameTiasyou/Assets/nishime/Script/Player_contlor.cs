@@ -24,37 +24,39 @@ public class Player_contlor : MonoBehaviour
         float lsh = Input.GetAxis("L_Stick_H");
         float lsv = Input.GetAxis("L_Stick_V");
 
-        if (lsh < 0)
+        if (lsh > 0)
         {
-            if (transform.position.x  >tyukan - haba)
+            if (transform.position.x < tyukan + haba)
             {
 
-                if (rote < 190f)
+                if (rote < 10f)
                 {
                     rote += rote_speed * Time.deltaTime;
                 }
-                transform.position -= transform.right * speedxz * Time.deltaTime;
+
+                transform.position += transform.right * speedxz * Time.deltaTime;
             }
 
         }
-        else if(lsh>0)
+        else if (lsh < 0)
         {
 
-            if (transform.position.x < tyukan + haba)
+            if (transform.position.x > tyukan - haba)
             {
-                if (rote > 170f)
+                if (rote > -10f)
                 {
                     rote -= rote_speed * Time.deltaTime;
                 }
-                transform.position += transform.right * speedxz * Time.deltaTime;
+                transform.position -= transform.right * speedxz * Time.deltaTime;
             }
         }
         else
         {
-            if (rote< 180f)
+            if (rote < 0f)
             {
                 rote += rote_speed * Time.deltaTime;
-            }else if (rote > 180)
+            }
+            else if (rote > 0)
             {
                 rote -= rote_speed * Time.deltaTime;
             }
@@ -64,3 +66,4 @@ public class Player_contlor : MonoBehaviour
         boat.transform.rotation = Quaternion.Euler(-90f, 0f, rote);
     }
 }
+
