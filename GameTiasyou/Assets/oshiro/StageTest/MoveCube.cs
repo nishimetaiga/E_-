@@ -13,6 +13,8 @@ public class MoveCube : MonoBehaviour
     }
     void Update()
     {
-        this.transform.position += new Vector3(0, 0, 0.2f);
+        //this.transform.position += new Vector3(0, 0, 0.2f);
+        this.transform.position -= new Vector3(0, 0, 0.2f);
+
     }
 }
