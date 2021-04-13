@@ -13,6 +13,10 @@ public class MoveCube : MonoBehaviour
     }
     void Update()
     {
+        if (Mathf.Approximately(Time.timeScale, 0f))
+        {
+            return;
+        }
         //this.transform.position += new Vector3(0, 0, 0.2f);
         this.transform.position -= new Vector3(0, 0, 0.2f);
 
