@@ -15,9 +15,9 @@ public class TitleScene : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown("joystick button 6"))
+        if (Input.GetKeyDown("joystick button 0"))
         {
-            Debug.Log("button6");
+            Debug.Log("button0");
             Invoke("ChangeScene", 0.1f);
         }
     }

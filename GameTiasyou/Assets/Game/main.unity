@@ -618,7 +618,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53037c119f0d5104b93aa1920c2cd2d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pauseUIPrefab: {fileID: 7454506101429866801, guid: baae07f8b226b3d408502f0f12f85025,
+  pauseUIPrefab: {fileID: 6799059226946439504, guid: baae07f8b226b3d408502f0f12f85025,
     type: 3}
 --- !u!1001 &1995169367
 PrefabInstance:
