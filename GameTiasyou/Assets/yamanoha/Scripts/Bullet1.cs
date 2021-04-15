@@ -22,7 +22,7 @@ public class Bullet1 : MonoBehaviour
     /// <summary>
     /// 攻撃用オブジェクト
     /// </summary>
-    private GameObject enemyBullet = null;
+    private GameObject bullet = null;
 
     private void Start()
     {
@@ -53,16 +53,17 @@ public class Bullet1 : MonoBehaviour
             {
                 num++;
                 // 攻撃用オブジェクトの生成
-                enemyBullet = Instantiate(curtainPrefab, new Vector3(radius * Mathf.Cos(angle), transform.position.y, radius * Mathf.Sin(angle)), Quaternion.Euler(0, -30 * num, 0));
+                Debug.Log(uroboros.transform.position.x);
+                bullet = Instantiate(curtainPrefab, new Vector3(uroboros.transform.position.x + radius * Mathf.Cos(angle), transform.position.y, uroboros.transform.position.z + radius * Mathf.Sin(angle)), Quaternion.Euler(0, -30 * num, 0));
 
-                // 生成した enemyBullet の親オブジェクトにアタッチしているこのオブジェクトを指定
-                enemyBullet.transform.parent = this.transform;
+                // 生成した bullet の親オブジェクトにアタッチしているこのオブジェクトを指定
+                bullet.transform.parent = this.transform;
 
                 // 名付け
-                enemyBullet.name = "enemyBullet" + num;
+                bullet.name = "bullet" + num;
 
-                // 生成した enemyBullet をリスト化する
-                bulletList.Add(enemyBullet);
+                // 生成した bullet をリスト化する
+                bulletList.Add(bullet);
 
                 // 処理の間隔を 0.05 秒あける
                 yield return new WaitForSeconds(0.05f);
@@ -131,9 +132,9 @@ public class Bullet1 : MonoBehaviour
                     //= new Vector3(bulletList[count].transform.position.x + bulletList[count].transform.position.x * variationRatio * 0.1f,
                     //bulletList[count].transform.position.y,
                     //bulletList[count].transform.position.z + bulletList[count].transform.position.z * variationRatio * 0.1f);
-                    = new Vector3(bulletList[count].transform.position.x + bulletSpeedX * Mathf.Cos(Mathf.PI / 6 *(count + 1)),
+                    = new Vector3(bulletList[count].transform.position.x + bulletSpeedX * Mathf.Cos(Mathf.PI / 6 * (count + 1))/*bulletList[count].transform.rotation.x*/,
                     bulletList[count].transform.position.y,
-                    bulletList[count].transform.position.z + bulletSpeedX * Mathf.Sin(Mathf.PI / 6 * (count + 1)));
+                    bulletList[count].transform.position.z + bulletSpeedX * Mathf.Sin(Mathf.PI / 6 * (count + 1))/*bulletList[count].transform.rotation.z*/);
             }
 
             // リストの最後の要素が一定の値になったら処理を抜ける
@@ -154,17 +155,18 @@ public class Bullet1 : MonoBehaviour
             for (int count = 0; count < bulletList.Count; count++)
             {
                 // 横に伸びる前と後の変化率を求める
-                float variationRatio = (bulletSpeedX / transform.localScale.x + bulletSpeedX % transform.localScale.x) * 0.5f;
+               // float variationRatio = (bulletSpeedX / transform.localScale.x + bulletSpeedX % transform.localScale.x) * 0.5f;
 
                 // カーテンを extendSpeedX ずつ横に縮める
                 bulletList[count].transform.localScale
                     = new Vector3(bulletList[count].transform.localScale.x - bulletSpeedX, bulletList[count].transform.localScale.y, bulletList[count].transform.localScale.z);
 
                 // 縮めた分だけ外側に移動させる
-                bulletList[count].transform.position
-                    = new Vector3(bulletList[count].transform.position.x + bulletList[count].transform.position.x * variationRatio * 0.1f,
-                    bulletList[count].transform.position.y,
-                    bulletList[count].transform.position.z + bulletList[count].transform.position.z * variationRatio * 0.1f);
+                bulletList[count].transform.position 
+                    = new Vector3(bulletList[count].transform.position.x + bulletSpeedX* Mathf.Cos(Mathf.PI / 6 * (count + 1)) * 2.0f,
+                bulletList[count].transform.position.y,
+                bulletList[count].transform.position.z + bulletSpeedX * Mathf.Sin(Mathf.PI / 6 * (count + 1)) * 2.0f);
+            Debug.Log(bulletList[count].transform.rotation.eulerAngles.y);
             }
 
             // リストの最後の要素が一定の値になったら処理を抜ける
@@ -176,7 +178,7 @@ public class Bullet1 : MonoBehaviour
         }
 
         // 攻撃が終了したオブジェクトを消去する
-        DeleteCurtainBullet();
+        DeleteBullet();
 
         yield break;
         
@@ -186,7 +188,7 @@ public class Bullet1 : MonoBehaviour
     /// 生成した攻撃オブジェクトを消去する
     /// </summary>
     /// <returns></returns>
-    void DeleteCurtainBullet()
+    void DeleteBullet()
     {
         // 使用済みのオブジェクトを破壊
         foreach(var obj in bulletList)
@@ -196,7 +198,8 @@ public class Bullet1 : MonoBehaviour
         // リストのクリア
         bulletList.Clear();
 
-        // クールタイム開始
+        //// クールタイム開始
         StartCoroutine(uroboros.GetComponent<UroborosAttackMothion>().AttackFinishReceiver());
+
     }
 }

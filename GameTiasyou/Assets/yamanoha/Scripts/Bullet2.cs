@@ -27,7 +27,7 @@ public class Bullet2 : MonoBehaviour
     /// <summary>
     /// 攻撃用オブジェクト
     /// </summary>
-    private GameObject enemyBullet = null;
+    private GameObject bullet = null;
 
 
     // Start is called before the first frame update
@@ -63,16 +63,16 @@ public class Bullet2 : MonoBehaviour
                 {
                     sphereNum++;
                     // 攻撃用オブジェクトの生成
-                    enemyBullet = Instantiate(spherePrefab, new Vector3((radius + ringSize * ringNum) * Mathf.Cos(angle), transform.position.y - 5, (radius + ringSize * ringNum) * Mathf.Sin(angle)), Quaternion.Euler(0, -22.5f * sphereNum, 0));
+                    bullet = Instantiate(spherePrefab, new Vector3(uroboros.transform.position.x + (radius + ringSize * ringNum) * Mathf.Cos(angle), transform.position.y - 5, uroboros.transform.position.z + (radius + ringSize * ringNum) * Mathf.Sin(angle)), Quaternion.Euler(0, -22.5f * sphereNum, 0));
 
-                    // 生成した enemyBullet の親オブジェクトにアタッチしているこのオブジェクトを指定
-                    enemyBullet.transform.parent = this.transform;
+                    // 生成した bullet の親オブジェクトにアタッチしているこのオブジェクトを指定
+                    bullet.transform.parent = this.transform;
 
                     // 生成したオブジェクトの名付け
-                    enemyBullet.name = "enemyBullet" + sphereNum;
+                    bullet.name = "bullet" + sphereNum;
 
-                    // 生成した enemyBullet をリスト化する
-                    bulletList.Add(enemyBullet);
+                    // 生成した bullet をリスト化する
+                    bulletList.Add(bullet);
 
                     // 処理の間隔を 0.05 秒あける
                     yield return new WaitForSeconds(0.05f);
@@ -99,16 +99,16 @@ public class Bullet2 : MonoBehaviour
             {
                 num++;
                 // 攻撃用オブジェクトの生成
-                enemyBullet = Instantiate(cylinderPrefab, new Vector3(radius * Mathf.Cos(angle), transform.position.y, radius * Mathf.Sin(angle)), Quaternion.Euler(90, -60f * num, 0));
+                bullet = Instantiate(cylinderPrefab, new Vector3(radius * Mathf.Cos(angle), transform.position.y, radius * Mathf.Sin(angle)), Quaternion.Euler(90, -60f * num, 0));
 
-                // 生成した enemyBullet の親オブジェクトにアタッチしているこのオブジェクトを指定
-                enemyBullet.transform.parent = this.transform;
+                // 生成した bullet の親オブジェクトにアタッチしているこのオブジェクトを指定
+                bullet.transform.parent = this.transform;
 
                 // 生成したオブジェクトの名付け
-                enemyBullet.name = "enemyBullet" + (num + bulletList.Count);
+                bullet.name = "bullet" + (num + bulletList.Count);
 
-                // 生成した enemyBullet をリスト化する
-                bulletList.Add(enemyBullet);
+                // 生成した bullet をリスト化する
+                bulletList.Add(bullet);
 
                 // 処理の間隔を 0.25 秒あける
                 yield return new WaitForSeconds(0.1f);
@@ -137,24 +137,24 @@ public class Bullet2 : MonoBehaviour
         // 現在の移動量
         float bulletMoveMentAmount = 0;
 
-        // 弾を下まで移動させる
-        while (true)
-        {
-            foreach(var obj in bulletList)
-            {
-                // オブジェクトを海面まで移動させる
-                obj.transform.position
-                    = new Vector3(obj.transform.position.x, obj.transform.position.y - bulletSpeedY, obj.transform.position.z);
-            }
+        //// 弾を下まで移動させる
+        //while (true)
+        //{
+        //    foreach(var obj in bulletList)
+        //    {
+        //        // オブジェクトを海面まで移動させる
+        //        obj.transform.position
+        //            = new Vector3(obj.transform.position.x, obj.transform.position.y - bulletSpeedY, obj.transform.position.z);
+        //    }
 
-            // リストの最後の要素が一定の値になったら処理を抜ける
-            if (bulletList[bulletList.Count - 1].transform.position.y - bulletList[bulletList.Count - 1].transform.localScale.y * 0.5 
-                <= moveLimitValueY.position.y + moveLimitValueY.localScale.y)
-                break;
+        //    // リストの最後の要素が一定の値になったら処理を抜ける
+        //    if (bulletList[bulletList.Count - 1].transform.position.y - bulletList[bulletList.Count - 1].transform.localScale.y * 0.5 
+        //        <= moveLimitValueY.position.y + moveLimitValueY.localScale.y)
+        //        break;
 
-            // 1フレームずつ処理が行われる
-            yield return null;
-        }
+        //    // 1フレームずつ処理が行われる
+        //    yield return null;
+        //}
 
         // 弾を水平方向に移動させる
         while (true)
@@ -181,7 +181,7 @@ public class Bullet2 : MonoBehaviour
         }
 
         // 攻撃が終了したオブジェクトを消去する
-        DeleteCurtainBullet();
+        DeleteBullet();
 
         yield break;
     }
@@ -190,7 +190,7 @@ public class Bullet2 : MonoBehaviour
     /// 生成した攻撃オブジェクトを消去する
     /// </summary>
     /// <returns></returns>
-    void DeleteCurtainBullet()
+    void DeleteBullet()
     {
         // 使用済みのオブジェクトを破壊
         foreach (var obj in bulletList)

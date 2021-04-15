@@ -17,15 +17,25 @@ public class UroborosAttackMothion : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (attackFlg == false )
+        if (attackFlg == false)
         {
-            var attackPaternChoice = /*0.2f;*/Random.value;
-            if(attackPaternChoice < 0.4)
+            var timent = 0;
+            var attackPaternChoice =/* 0.2f;*/ Random.value;
+            Debug.Log(attackPaternChoice);
+            if (attackPaternChoice < 0.25)
+            {
                 attackCourtain.GetComponent<Bullet1>().AttackStart();
-            else 
+                //attackCourtain.GetComponent<Bullet4>().AttackStart();
+            }
+            else if (attackPaternChoice < 0.5)
                 attackCourtain.GetComponent<Bullet2>().AttackStart();
+            else if (attackPaternChoice < 0.75)
+                attackCourtain.GetComponent<Bullet3>().AttackStart();
+            else
+                attackCourtain.GetComponent<Bullet4>().AttackStart();
 
             attackFlg = true;
+            //StartCoroutine(AttackFinishReceiver());// クールタイムとして使用
         }
     }
 
@@ -34,7 +44,7 @@ public class UroborosAttackMothion : MonoBehaviour
     /// </summary>
     public IEnumerator AttackFinishReceiver()
     {
-        yield return new WaitForSeconds(Random.Range(1f, 5f));
+        yield return new WaitForSeconds(Random.Range(0f, 2f));
         attackFlg = false;
     }
 }
