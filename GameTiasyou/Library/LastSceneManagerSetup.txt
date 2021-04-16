@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/nishime/2dgame/2dgame.unity
+- path: Assets/Game/Scene/main.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0

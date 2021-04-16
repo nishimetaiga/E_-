@@ -63,19 +63,21 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\nishime\2dgame\GameControl.cs" />
-    <Compile Include="Assets\nishime\Script\Player.cs" />
+    <Compile Include="Assets\Game\C#\DeleteFloor.cs" />
+    <Compile Include="Assets\Game\C#\GAMEOVER.cs" />
+    <Compile Include="Assets\Game\C#\GameControl.cs" />
+    <Compile Include="Assets\Game\C#\MoveCube.cs" />
+    <Compile Include="Assets\Game\C#\PauseScene.cs" />
+    <Compile Include="Assets\Game\C#\Player_gameover.cs" />
+    <Compile Include="Assets\Game\C#\Start2Scene.cs" />
+    <Compile Include="Assets\Game\C#\StartScene.cs" />
+    <Compile Include="Assets\Game\C#\TesttCameraPosition.cs" />
+    <Compile Include="Assets\Game\C#\TimeBar.cs" />
+    <Compile Include="Assets\Game\C#\TitleScene.cs" />
+    <Compile Include="Assets\Game\C#\fps.cs" />
+    <Compile Include="Assets\Player_contlor.cs" />
+    <Compile Include="Assets\nishime\Script\GameManager.cs" />
     <Compile Include="Assets\nishime\Script\Player_contlor.cs" />
-    <Compile Include="Assets\nishime\Script\boat.cs" />
-    <Compile Include="Assets\nishime\Script\fps.cs" />
-    <Compile Include="Assets\oshiro\StageTest\DeleteFloor.cs" />
-    <Compile Include="Assets\oshiro\StageTest\MoveCube.cs" />
-    <Compile Include="Assets\oshiro\StageTest\TesttCameraPosition.cs" />
-    <Compile Include="Assets\sinzato\Script\GAMEOVER.cs" />
-    <Compile Include="Assets\sinzato\Script\PauseScene.cs" />
-    <Compile Include="Assets\sinzato\Script\Start2Scene.cs" />
-    <Compile Include="Assets\sinzato\Script\StartScene.cs" />
-    <Compile Include="Assets\sinzato\Script\TitleScene.cs" />
     <Compile Include="Assets\yamanoha\Scripts\Bullet1.cs" />
     <Compile Include="Assets\yamanoha\Scripts\Bullet2.cs" />
     <Compile Include="Assets\yamanoha\Scripts\Bullet3.cs" />
