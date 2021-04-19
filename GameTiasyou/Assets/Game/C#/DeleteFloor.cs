@@ -18,18 +18,20 @@ public class DeleteFloor : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         //タグが　Player　のオブジェクトが触れたときに処理が行われる
+        //オブジェクトを出す処理
         if (other.gameObject.tag == "Player")
         {
             //確認用
             //Debug.Log("すり抜けた！");
             //Instantiate(FloorObj, new Vector3(tmp.x, tmp.y, tmp.z - 49.0F), Quaternion.identity);
             //Instantiate(FloorObj, new Vector3(tmp.x, tmp.y, tmp.z + 49.0F), Quaternion.identity);
-            Instantiate(FloorObj, new Vector3(tmp.x, tmp.y, tmp.z + 149.0F), Quaternion.identity);
+            Instantiate(FloorObj, new Vector3(tmp.x, tmp.y, tmp.z + 149.6F), Quaternion.identity);
         }
     }
     private void OnTriggerExit(Collider other)
     {
         //タグが　Player　のオブジェクトが触れたときに処理が行われる
+        //オブジェクトを消す処理
         if (other.gameObject.tag == "Player")
         {
             //確認用
