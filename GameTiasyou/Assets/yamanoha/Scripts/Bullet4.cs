@@ -65,7 +65,7 @@ public class Bullet4 : MonoBehaviour
     public IEnumerator GenerateSwirlBullet()
     {
         {
-            var sphereMax = 50;// 1列ごとに生成する弾の最大数
+            var sphereMax = 90;// 1列ごとに生成する弾の最大数
             float arc = Mathf.PI * 0.05f;     // 弾同士の弧
             float ringSize = spherePrefab.transform.localScale.x + 5;
 
@@ -80,7 +80,7 @@ public class Bullet4 : MonoBehaviour
                     uroboros.transform.position.z),
                     Quaternion.Euler(0, arc * (sphereNum), 0));
 
-                // 処理の間隔を 0.05 秒あける
+                // 処理の間隔を 0.1 秒あける
                 yield return new WaitForSeconds(0.1f);
             }
 
@@ -96,7 +96,8 @@ public class Bullet4 : MonoBehaviour
     /// <returns></returns>
     public IEnumerator MoveSphereBullet()
     {
-        var limitRange = 100;
+        // 射程距離
+        var limitRange = 200;
 
         // 一定の距離を移動するまで繰り返す
         while (true)
@@ -111,7 +112,7 @@ public class Bullet4 : MonoBehaviour
                 else
                 {
                     float arc = obj.transform.rotation.eulerAngles.y;
-                    float bulletSpeed = 0.1f;
+                    float bulletSpeed = 0.5f;
                     // オブジェクトを外側に向けて移動させる
                     obj.transform.position
                         = new Vector3(obj.transform.position.x + Mathf.Cos(arc) * bulletSpeed,

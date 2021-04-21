@@ -28,6 +28,8 @@ public class Bullet1 : MonoBehaviour
     {
         // スクリプトがアタッチされている GameObject を格納
         uroboros = GameObject.Find("LaunchPort");
+
+        curtainPrefab = (GameObject)Resources.Load("Cube");
     }
 
     /// <summary>
@@ -50,14 +52,19 @@ public class Bullet1 : MonoBehaviour
             float radius = 5;
 
             for (float angle = Mathf.PI / 6; angle < Mathf.PI * 2; angle += Mathf.PI / 6)
+            //for (float angle = 0; angle < Mathf.PI; angle += Mathf.PI / 12)
             {
                 num++;
                 // 攻撃用オブジェクトの生成
-                Debug.Log(uroboros.transform.position.x);
-                bullet = Instantiate(curtainPrefab, new Vector3(uroboros.transform.position.x + radius * Mathf.Cos(angle), transform.position.y, uroboros.transform.position.z + radius * Mathf.Sin(angle)), Quaternion.Euler(0, -30 * num, 0));
+                bullet = Instantiate(curtainPrefab, 
+                    new Vector3(uroboros.transform.position.x + radius * Mathf.Cos(angle), 
+                            transform.position.y, 
+                            uroboros.transform.position.z + radius * Mathf.Sin(angle)), 
+                    Quaternion.Euler(0, -30 * num, 0), uroboros.transform);
 
                 // 生成した bullet の親オブジェクトにアタッチしているこのオブジェクトを指定
-                bullet.transform.parent = this.transform;
+                bullet.transform.parent = uroboros.transform;
+                Debug.Log(bullet.transform.parent);
 
                 // 名付け
                 bullet.name = "bullet" + num;
@@ -83,11 +90,11 @@ public class Bullet1 : MonoBehaviour
         // 縦の変化量
         const float bulletSpeedY = 0.1f;
         // 横の変化量
-        const float bulletSpeedX = 0.3f;
+        const float bulletSpeedX = 0.1f;
         // 移動限界距離
         const float moveLimitValueY = 0f;
         // 横に伸ばす量
-        const float specifiedValueX = 30f;
+        const float specifiedValueX = 60f;
 
         // カーテン型の攻撃を縦に伸ばす
         while (true)
@@ -163,9 +170,9 @@ public class Bullet1 : MonoBehaviour
 
                 // 縮めた分だけ外側に移動させる
                 bulletList[count].transform.position 
-                    = new Vector3(bulletList[count].transform.position.x + bulletSpeedX* Mathf.Cos(Mathf.PI / 6 * (count + 1)) * 2.0f,
+                    = new Vector3(bulletList[count].transform.position.x + bulletSpeedX* Mathf.Cos(Mathf.PI / 6 * (count + 1)) * 3.0f,
                 bulletList[count].transform.position.y,
-                bulletList[count].transform.position.z + bulletSpeedX * Mathf.Sin(Mathf.PI / 6 * (count + 1)) * 2.0f);
+                bulletList[count].transform.position.z + bulletSpeedX * Mathf.Sin(Mathf.PI / 6 * (count + 1)) * 3.0f);
             Debug.Log(bulletList[count].transform.rotation.eulerAngles.y);
             }
 

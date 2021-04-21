@@ -65,7 +65,8 @@ public class Bullet3 : MonoBehaviour
     public IEnumerator Generate3WayBullet()
     {
         int num = 0;        // 番号付け
-        float radius = 3;   // 生成される球の間隔
+        float radiusX = 30;   // 生成される球の横間隔
+        float radiusZ = 20;   // 生成される球の縦間隔
         targetVector = player.transform.position - uroboros.transform.position;  // ウロボロスからプレイヤーへのベクトル
         direction = targetVector / targetVector.magnitude;  // targetVector の正規化(単位ベクトル化)
         Vector3 vertical = new Vector3(targetVector.z * 0.1f, targetVector.y, -targetVector.x * 0.1f);  // targetVectorの垂直ベクトル
@@ -98,12 +99,11 @@ public class Bullet3 : MonoBehaviour
                 {
                     num++;
 
-                    Debug.Log(cnt * radius * unitBallisticVector.x + unitVertical.x + vertical.x *  way);
                     // 攻撃用オブジェクトの生成
                     bullet = Instantiate(spherePrefab,
-                        new Vector3(/*transform.position.x +*/ cnt * radius * unitBallisticVector.x + unitVertical.x + vertical.x * way,
-                        cnt * radius * direction.y,
-                        /*transform.position.z +*/ cnt * radius * unitBallisticVector.z + unitVertical.z + vertical.z * way),
+                        new Vector3(/*transform.position.x +*/ cnt * radiusX * unitBallisticVector.x + unitVertical.x + vertical.x * way,
+                        /*cnt * radius * */direction.y,
+                        /*transform.position.z +*/ cnt * radiusX * unitBallisticVector.z + unitVertical.z + vertical.z * way),
                         Quaternion.Euler(Mathf.Cos(bulletAngle.x), Mathf.Sin(bulletAngle.y), Mathf.Sin(bulletAngle.y)));
                     /*new Vector3(cnt * radius * direction.x + unitVertical.x + vertical.x * way,
                     cnt * radius * direction.y, 
@@ -114,7 +114,7 @@ public class Bullet3 : MonoBehaviour
                         Quaternion.Euler(Mathf.Cos(bulletAngle.x), Mathf.Sin(bulletAngle.y), Mathf.Sin(bulletAngle.y)));*/
 
                     // オブジェクトの大きさの指定
-                    bullet.transform.localScale = new Vector3(1, 1, 1);
+                    //bullet.transform.localScale = new Vector3(1, 1, 1);
 
                     // 生成した bullet の親オブジェクトにアタッチしているこのオブジェクトを指定
                     bullet.transform.SetParent(this.transform, false);
@@ -125,8 +125,8 @@ public class Bullet3 : MonoBehaviour
                     // 生成した bullet をリスト化する
                     bulletList.Add(bullet);
 
-                    // 処理の間隔を 0.05 秒あける
-                    yield return new WaitForSeconds(0.05f);
+                    // 処理の間隔を 0.1 秒あける
+                    yield return new WaitForSeconds(0.2f);
                 }
                 unitVertical *= -1;
             }
@@ -145,9 +145,8 @@ public class Bullet3 : MonoBehaviour
     /// <returns></returns>
     public IEnumerator Move3WayBullet()
     {
-
-        // 移動限界地点
-        Transform moveLimitValueY = GameObject.Find("Field Cube").transform;
+        // 射程距離
+        var limitRange = 100;
 
         // 弾を海面まで移動させる
         while (true)
@@ -160,9 +159,10 @@ public class Bullet3 : MonoBehaviour
                     = new Vector3(obj.transform.position.x + unitBallisticVector.x * bulletSpeed, obj.transform.position.y + direction.y * bulletSpeed, obj.transform.position.z + unitBallisticVector.z * bulletSpeed);
             }
 
+            var dis = Vector3.Distance(bulletList[bulletList.Count - 1].transform.position, uroboros.transform.position);
+
             // 弾の最後尾が一定の値になったら処理を抜ける
-            if (bulletList[0].transform.position.y + bulletList[bulletList.Count - 1].transform.localScale.y /** 0.5*/
-                < moveLimitValueY.position.y)
+            if (dis> limitRange)
                 break;
 
             // 1フレームずつ処理が行われる

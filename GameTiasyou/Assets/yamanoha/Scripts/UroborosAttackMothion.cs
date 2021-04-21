@@ -19,8 +19,8 @@ public class UroborosAttackMothion : MonoBehaviour
     {
         if (attackFlg == false)
         {
-            var timent = 0;
-            var attackPaternChoice =/* 0.2f;*/ Random.value;
+            //var timent = 0;
+            var attackPaternChoice = 0.7f; /*Random.value;*/
             Debug.Log(attackPaternChoice);
             if (attackPaternChoice < 0.25)
             {

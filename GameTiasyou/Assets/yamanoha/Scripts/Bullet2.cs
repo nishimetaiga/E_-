@@ -130,8 +130,8 @@ public class Bullet2 : MonoBehaviour
         const float bulletSpeedY = 0.5f;
         // 横の変化量
         const float bulletSpeedX = 0.7f;
-        // 移動限界地点
-        Transform moveLimitValueY = GameObject.Find("Field Cube").transform;
+        //// 移動限界地点
+        ////Transform moveLimitValueY = GameObject.Find("Field Cube").transform;
         // 移動限界距離
         const float specifiedValueX = 110f;
         // 現在の移動量
