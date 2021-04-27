@@ -302,6 +302,10 @@ PrefabInstance:
       propertyPath: m_Convex
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6400000, guid: 10e1d640713d3714f907eb29b3fa1199, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 10e1d640713d3714f907eb29b3fa1199, type: 3}
 --- !u!1 &63987750
@@ -1684,6 +1688,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c7ce22dccec2c948b19f516a765d64b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!136 &1465112415
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1465112413}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.003
+  m_Height: 0.03
+  m_Direction: 1
+  m_Center: {x: 0.00016428577, y: -0.021501606, z: -0.0029148029}
 --- !u!54 &1465112420
 Rigidbody:
   m_ObjectHideFlags: 0
