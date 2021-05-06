@@ -80,7 +80,7 @@ public class Bullet3 : MonoBehaviour
 
 
         //for (float angle = Mathf.PI / 6; angle < Mathf.PI * 2; angle += Mathf.PI / 6)
-        for (int way = -1, setAngle = 0; way < 2;way++)
+        for (int way = -1/*, setAngle = 0*/; way < 2;way++)
         {
             ballisticVector = player.transform.position + (vertical * way) - uroboros.transform.position;
             unitBallisticVector = ballisticVector / ballisticVector.magnitude;
@@ -103,7 +103,7 @@ public class Bullet3 : MonoBehaviour
                     bullet = Instantiate(spherePrefab,
                         new Vector3(/*transform.position.x +*/ cnt * radiusX * unitBallisticVector.x + unitVertical.x + vertical.x * way,
                         /*cnt * radius * */direction.y,
-                        /*transform.position.z +*/ cnt * radiusX * unitBallisticVector.z + unitVertical.z + vertical.z * way),
+                        /*transform.position.z +*/ cnt * radiusZ * unitBallisticVector.z + unitVertical.z + vertical.z * way),
                         Quaternion.Euler(Mathf.Cos(bulletAngle.x), Mathf.Sin(bulletAngle.y), Mathf.Sin(bulletAngle.y)));
                     /*new Vector3(cnt * radius * direction.x + unitVertical.x + vertical.x * way,
                     cnt * radius * direction.y, 

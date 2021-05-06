@@ -26,7 +26,7 @@ public class Barrage_control : MonoBehaviour
         //ボートのオブジェクトのインスペクターのデータ入手
         barrage = GameObject.Find("Barrage");
 
-        barrage_num = Random.Range(0, 4);
+        barrage_num = Random.Range(0, 5);
         // barrage_num = Random.Range(1);
     }
 
@@ -46,7 +46,7 @@ public class Barrage_control : MonoBehaviour
             if (na == starat)
             {
                 barrge_flg = false;
-                barrage_num = Random.Range(0, 4);
+                barrage_num = Random.Range(0, 5);
                 ba_flg = false;
                 na = 0;
             }
@@ -71,6 +71,10 @@ public class Barrage_control : MonoBehaviour
 
             case 3:
                 barrage.GetComponent<barrage04>().barrage04_control();
+                break;
+
+            case 4:
+                barrage.GetComponent<Bullet4>().AttackControl();
                 break;
         }
     }

@@ -20,7 +20,7 @@ public class UroborosAttackMothion : MonoBehaviour
         if (attackFlg == false)
         {
             //var timent = 0;
-            var attackPaternChoice = 0.7f; /*Random.value;*/
+            var attackPaternChoice = 0.8f; /*Random.value;*/
             Debug.Log(attackPaternChoice);
             if (attackPaternChoice < 0.25)
             {
@@ -32,7 +32,7 @@ public class UroborosAttackMothion : MonoBehaviour
             else if (attackPaternChoice < 0.75)
                 attackCourtain.GetComponent<Bullet3>().AttackStart();
             else
-                attackCourtain.GetComponent<Bullet4>().AttackStart();
+                attackCourtain.GetComponent<Bullet4>().AttackControl();
 
             attackFlg = true;
             //StartCoroutine(AttackFinishReceiver());// クールタイムとして使用

@@ -634,6 +634,7 @@ GameObject:
   - component: {fileID: 642298459}
   - component: {fileID: 642298460}
   - component: {fileID: 642298461}
+  - component: {fileID: 642298462}
   m_Layer: 0
   m_Name: Barrage
   m_TagString: Untagged
@@ -732,6 +733,20 @@ MonoBehaviour:
   d2: {fileID: 3123843008657856846, guid: 2eca7046f13292d4e8c49b55ea542fe0, type: 3}
   _des: 300
   count: 0
+--- !u!114 &642298462
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 642298455}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d20d910bff0d2c449aedd86b8fa50c27, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spherePrefab: {fileID: 2538488219232564888, guid: dec35ecda157138429e87b10bd72eac6,
+    type: 3}
 --- !u!1 &988354959
 GameObject:
   m_ObjectHideFlags: 0
@@ -15559,7 +15574,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53037c119f0d5104b93aa1920c2cd2d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pauseUIPrefab: {fileID: 6799059226946439504, guid: ef40ca8395c764349bb5d6a5c80f757a,
+  pauseUIPrefab: {fileID: 6799059226946439504, guid: baae07f8b226b3d408502f0f12f85025,
+    type: 3}
+  goTitleButtonPrefab: {fileID: 4560008947958099916, guid: fee60319c1c55114382b9448e235f951,
     type: 3}
 --- !u!1001 &1996187814
 PrefabInstance:

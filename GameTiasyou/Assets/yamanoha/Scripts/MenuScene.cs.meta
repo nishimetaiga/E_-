@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: 2086a6115d741b240a32c33db7bc190a
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - menuUIPrefab: {instanceID: 0}
+  - soundButtonPrefab: {fileID: 2560859196726802257, guid: f37eef8aabe48ec449e192defe48db33,
+      type: 3}
+  - gameEndButtonPrefab: {instanceID: 0}
+  - backButtonPrefab: {fileID: 2248297908188077544, guid: b9ef2c05cb46f7345bea23b22f115258,
+      type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

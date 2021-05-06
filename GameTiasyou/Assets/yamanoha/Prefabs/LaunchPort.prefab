@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 1003682140933349086}
   - component: {fileID: 1003682140933349087}
   - component: {fileID: 1003682140933349056}
+  - component: {fileID: 3110922040814788101}
   m_Layer: 0
   m_Name: LaunchPort
   m_TagString: Untagged
@@ -105,3 +106,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spherePrefab: {fileID: 3797459379140995403, guid: 41c5910ea3df99d4881d1b8d5ae6f9ff,
     type: 3}
+--- !u!114 &3110922040814788101
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1003682140933349057}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fcab044ad99a401458d5c60f5b04062d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
