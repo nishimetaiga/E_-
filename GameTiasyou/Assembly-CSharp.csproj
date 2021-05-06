@@ -77,9 +77,15 @@
     <Compile Include="Assets\nishime\Script\Barrage_control.cs" />
     <Compile Include="Assets\nishime\Script\GameControl.cs" />
     <Compile Include="Assets\nishime\Script\Player_contlor.cs" />
-    <Compile Include="Assets\nishime\Script\barrage01.cs" />
-    <Compile Include="Assets\nishime\Script\barrage02.cs" />
     <Compile Include="Assets\nishime\Script\boatf.cs" />
+    <Compile Include="Assets\nishime\Script\mate\b_1.cs" />
+    <Compile Include="Assets\nishime\Script\mate\b_2.cs" />
+    <Compile Include="Assets\nishime\Script\mate\b_3.cs" />
+    <Compile Include="Assets\nishime\Script\mate\b_4.cs" />
+    <Compile Include="Assets\nishime\Script\mate\barrage01.cs" />
+    <Compile Include="Assets\nishime\Script\mate\barrage02.cs" />
+    <Compile Include="Assets\nishime\Script\mate\barrage03.cs" />
+    <Compile Include="Assets\nishime\Script\mate\barrage04.cs" />
     <Compile Include="Assets\yamanoha\Scripts\Bullet1.cs" />
     <Compile Include="Assets\yamanoha\Scripts\Bullet2.cs" />
     <Compile Include="Assets\yamanoha\Scripts\Bullet3.cs" />
