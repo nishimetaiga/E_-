@@ -35,47 +35,49 @@ public class Barrage_control : MonoBehaviour
     public void barrage_wie()
     {
 
-
-
-        if (barrge_flg == true)
+        if (Time.deltaTime != 0)
         {
-            
 
-            na++;
-
-            if (na == starat)
+            if (barrge_flg == true)
             {
-                barrge_flg = false;
-                barrage_num = Random.Range(0, 5);
-                ba_flg = false;
-                na = 0;
+
+
+                na++;
+
+                if (na == starat)
+                {
+                    barrge_flg = false;
+                    barrage_num = Random.Range(0, 5);
+                    ba_flg = false;
+                    na = 0;
+                }
+
+
             }
-            
-            
-        }
-        //barrage_num++;
-        //Debug.Log();
+            //barrage_num++;
+            //Debug.Log();
 
-        switch (barrage_num)
-        {
-            case 0:
-                barrage.GetComponent<barrage01>().barrage01_control();
-                break;
-            case 1:
-                barrage.GetComponent<barrage02>().barrage02_control();
-                break;
+            switch (barrage_num)
+            {
+                case 0:
+                    barrage.GetComponent<barrage01>().barrage01_control();
+                    break;
+                case 1:
+                    barrage.GetComponent<barrage02>().barrage02_control();
+                    break;
 
-            case 2:
-                barrage.GetComponent<barrage03>().barrage03_control();
-                break;
+                case 2:
+                    barrage.GetComponent<barrage03>().barrage03_control();
+                    break;
 
-            case 3:
-                barrage.GetComponent<barrage04>().barrage04_control();
-                break;
+                case 3:
+                    barrage.GetComponent<barrage04>().barrage04_control();
+                    break;
 
-            case 4:
-                barrage.GetComponent<Bullet4>().AttackControl();
-                break;
+                case 4:
+                    barrage.GetComponent<Bullet4>().AttackControl();
+                    break;
+            }
         }
     }
 }
