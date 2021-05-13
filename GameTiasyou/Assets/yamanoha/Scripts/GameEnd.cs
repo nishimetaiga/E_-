@@ -20,6 +20,7 @@ public class GameEnd : MonoBehaviour
     /// </summary>
     void EndGame()
     {
+        UnityEditor.EditorApplication.isPlaying = false;
         Application.Quit();
         //UnityEditor.EditorApplication.isPlaying = false;
     }
