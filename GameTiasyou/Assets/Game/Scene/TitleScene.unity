@@ -225,9 +225,7 @@ GameObject:
   - component: {fileID: 553344508}
   - component: {fileID: 553344507}
   - component: {fileID: 553344506}
-  - component: {fileID: 553344509}
   - component: {fileID: 553344510}
-  - component: {fileID: 553344511}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -300,18 +298,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &553344509
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 553344505}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 627c07c30287f4747b9bec7b952326a9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &553344510
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -332,18 +318,6 @@ MonoBehaviour:
     type: 3}
   backButtonPrefab: {fileID: 2248297908188077544, guid: b9ef2c05cb46f7345bea23b22f115258,
     type: 3}
---- !u!114 &553344511
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 553344505}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3d9d91c41e0be1041a1d08d408fa8818, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &556239781
 GameObject:
   m_ObjectHideFlags: 0

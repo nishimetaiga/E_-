@@ -26,6 +26,9 @@ public class Player_contlor : MonoBehaviour
     public float rote_speed;   //回転のスピード
     public float rote_max;     //回転の限界値
 
+
+
+
     GameControl gc;
 
     private void Start()
@@ -33,7 +36,9 @@ public class Player_contlor : MonoBehaviour
 
         boat = GameObject.Find("Boat_4");
 
-        boatinit_z=boat.transform.position.z;
+      
+
+        boatinit_z =boat.transform.position.z;
         //Debug.Log(Playera.name);
         //Debug.Log(Playera.transform.position);
 

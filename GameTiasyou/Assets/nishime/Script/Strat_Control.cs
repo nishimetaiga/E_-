@@ -72,7 +72,7 @@ public class Strat_Control : MonoBehaviour
         }
         else if (select == 1)
         {
-            UnityEditor.EditorApplication.isPlaying = false;
+            //UnityEditor.EditorApplication.isPlaying = false;
             Application.Quit();
         }
     }

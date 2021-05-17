@@ -1,17 +1,20 @@
 ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
+    - BGM_con
     - Barrage_control
     - Bullet4
     - DeleteFloor
     - GAMEOVER
     - GameControl
-    - GameEnd
     - MenuScene
     - MoveCube
     - PauseScene
+    - Pause_Control
     - Player_contlor
+    - Return_title
     - StartScene
+    - Strat_Control
     - TimeBar
     - TitleScene
     - b_1
@@ -74,15 +77,17 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11304}
     - Class: 114
-      Script: {instanceID: 11836}
+      Script: {instanceID: 11648}
     - Class: 114
-      Script: {instanceID: 11986}
+      Script: {instanceID: 11840}
     - Class: 114
-      Script: {instanceID: 13048}
+      Script: {instanceID: 11990}
     - Class: 114
-      Script: {instanceID: 13220}
+      Script: {instanceID: 13056}
     - Class: 114
-      Script: {instanceID: 13448}
+      Script: {instanceID: 13230}
+    - Class: 114
+      Script: {instanceID: 13458}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -131,17 +136,19 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11304}
     - Class: 114
-      Script: {instanceID: 11836}
+      Script: {instanceID: 11648}
     - Class: 114
-      Script: {instanceID: 11986}
+      Script: {instanceID: 11840}
     - Class: 114
-      Script: {instanceID: 12010}
+      Script: {instanceID: 11990}
     - Class: 114
-      Script: {instanceID: 13048}
+      Script: {instanceID: 12014}
     - Class: 114
-      Script: {instanceID: 13220}
+      Script: {instanceID: 13056}
     - Class: 114
-      Script: {instanceID: 13448}
+      Script: {instanceID: 13230}
+    - Class: 114
+      Script: {instanceID: 13458}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -192,17 +199,15 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11424}
     - Class: 114
-      Script: {instanceID: 11836}
+      Script: {instanceID: 11440}
     - Class: 114
-      Script: {instanceID: 11968}
+      Script: {instanceID: 11990}
     - Class: 114
-      Script: {instanceID: 11986}
+      Script: {instanceID: 13056}
     - Class: 114
-      Script: {instanceID: 12010}
+      Script: {instanceID: 13094}
     - Class: 114
-      Script: {instanceID: 13048}
-    - Class: 114
-      Script: {instanceID: 13448}
+      Script: {instanceID: 13458}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -246,6 +251,10 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
+    - Class: 82
+      Script: {instanceID: 0}
+    - Class: 83
+      Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
     - Class: 108
@@ -263,45 +272,49 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11434}
     - Class: 114
-      Script: {instanceID: 11460}
+      Script: {instanceID: 11462}
     - Class: 114
-      Script: {instanceID: 11566}
+      Script: {instanceID: 11568}
     - Class: 114
-      Script: {instanceID: 11986}
+      Script: {instanceID: 11990}
     - Class: 114
-      Script: {instanceID: 12056}
+      Script: {instanceID: 12060}
     - Class: 114
-      Script: {instanceID: 12156}
+      Script: {instanceID: 12160}
     - Class: 114
-      Script: {instanceID: 12230}
+      Script: {instanceID: 12234}
     - Class: 114
-      Script: {instanceID: 12360}
+      Script: {instanceID: 12284}
     - Class: 114
-      Script: {instanceID: 12394}
+      Script: {instanceID: 12366}
     - Class: 114
-      Script: {instanceID: 12456}
+      Script: {instanceID: 12400}
     - Class: 114
-      Script: {instanceID: 12808}
+      Script: {instanceID: 12462}
     - Class: 114
-      Script: {instanceID: 12840}
+      Script: {instanceID: 12816}
     - Class: 114
-      Script: {instanceID: 12916}
+      Script: {instanceID: 12848}
     - Class: 114
-      Script: {instanceID: 13048}
+      Script: {instanceID: 12924}
     - Class: 114
-      Script: {instanceID: 13064}
+      Script: {instanceID: 13056}
     - Class: 114
-      Script: {instanceID: 13190}
+      Script: {instanceID: 13072}
     - Class: 114
-      Script: {instanceID: 13214}
+      Script: {instanceID: 13094}
     - Class: 114
-      Script: {instanceID: 13230}
+      Script: {instanceID: 13200}
     - Class: 114
-      Script: {instanceID: 13308}
+      Script: {instanceID: 13224}
     - Class: 114
-      Script: {instanceID: 13448}
+      Script: {instanceID: 13240}
     - Class: 114
-      Script: {instanceID: 13486}
+      Script: {instanceID: 13318}
+    - Class: 114
+      Script: {instanceID: 13458}
+    - Class: 114
+      Script: {instanceID: 13496}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -425,6 +438,12 @@ ScriptsOnlyBuild:
     className: PauseScene
   - hash:
       serializedVersion: 2
+      Hash: 52450babd9c37c9520d0bb48c0cd2198
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Strat_Control
+  - hash:
+      serializedVersion: 2
       Hash: 0fcc79258cdfa11085a04e4420855cd6
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
@@ -513,6 +532,12 @@ ScriptsOnlyBuild:
     assemblyName: Cinemachine.dll
     namespaceName: Cinemachine
     className: CinemachineExternalCamera
+  - hash:
+      serializedVersion: 2
+      Hash: f68a00acd2d21a87ed8043f9a3aa3cd7
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Return_title
   - hash:
       serializedVersion: 2
       Hash: b5eb08b578a2f2d80bb106cbe65ab501
@@ -749,6 +774,12 @@ ScriptsOnlyBuild:
     className: CinemachineComposer
   - hash:
       serializedVersion: 2
+      Hash: 024c8448b24dc73227c534a8ebb77102
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Pause_Control
+  - hash:
+      serializedVersion: 2
       Hash: 15882a52798c275361cd0a3ada984ec5
     assemblyName: Cinemachine.dll
     namespaceName: Cinemachine
@@ -879,6 +910,12 @@ ScriptsOnlyBuild:
     assemblyName: Cinemachine.dll
     namespaceName: Cinemachine
     className: CinemachineMixingCamera
+  - hash:
+      serializedVersion: 2
+      Hash: 0a577ad95bfaab49bf5444c7cd408fa4
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: te
   - hash:
       serializedVersion: 2
       Hash: 5ad4aa237d47ac2bab17bacb672edf7a
@@ -1035,6 +1072,12 @@ ScriptsOnlyBuild:
     assemblyName: Cinemachine.dll
     namespaceName: Cinemachine
     className: CinemachineSmoothPath
+  - hash:
+      serializedVersion: 2
+      Hash: cbeba0be93684d3bcd4b72542d830f58
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: BGM_con
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -1235,12 +1278,6 @@ ScriptsOnlyBuild:
     className: ToggleGroup
   - hash:
       serializedVersion: 2
-      Hash: 13ff15b355599037ec49db1dace4c8cc
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: boatf
-  - hash:
-      serializedVersion: 2
       Hash: c3d3430df9e3ea95e3e3d587961390fb
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
@@ -1251,4 +1288,4 @@ ScriptsOnlyBuild:
   - Assets/Game/Scene/main.unity
   - Assets/Game/Scene/Result.unity
   - Assets/Game/Scene/Clear.unity
-  playerPath: C:/Users/yamanoha yoshiyuki/Desktop/E_AvoidBarrage_0507/GameTiasyou.exe
+  playerPath: C:/Users/nishime taiga/Desktop/E_Build/GameTiasyou.exe
