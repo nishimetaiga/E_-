@@ -16,8 +16,8 @@ public class b_2 : MonoBehaviour
     public bool flg=true;
 
 
-    private GameObject barrage;
-    private GameObject boat;
+    public GameObject barrage;
+    public GameObject boat;
 
     private void Start()
     {
@@ -25,15 +25,16 @@ public class b_2 : MonoBehaviour
         barrage= GameObject.Find("Barrage");
         boat = GameObject.Find("Boat_4");
     }
-    // Update is called once per frame
-    void Update()
-    {
 
+    // Update is called once per frame
+    public void move()
+    {
+        //barrage = GameObject.Find("Barrage");
+      boat = GameObject.Find("Boat_4");
         if (boat.transform.position.z - 20 < transform.position.z)
         {
             flg = false;
-           
-           
+
         }
 
         if (flg == true)
@@ -42,9 +43,6 @@ public class b_2 : MonoBehaviour
         }
         transform.position += transform.forward * speed;
 
-        
-
-
         _de++;
 
 
@@ -52,6 +50,16 @@ public class b_2 : MonoBehaviour
         if (de < _de)
         {
             Destroy(gameObject);
+            barrage.GetComponent<barrage02>().dead_count++;
+
+
+            int d = barrage.GetComponent<barrage02>().dead_count;
+            int a = barrage.GetComponent<barrage02>().obj_count;
+
+            if (a == d)
+            {
+                barrage.GetComponent<Barrage_control>().backup_num = barrage.GetComponent<Barrage_control>().barrage_num;
+            }
         }
     }
 }

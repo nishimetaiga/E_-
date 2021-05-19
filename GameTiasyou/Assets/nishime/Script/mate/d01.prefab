@@ -107,4 +107,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0.3
-  de: 1000
+  dead_mx: 1000
+  _dead: 0
+  barrage: {fileID: 0}
