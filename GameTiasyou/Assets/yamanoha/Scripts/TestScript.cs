@@ -7,7 +7,7 @@ public class TestScript : MonoBehaviour
 {
     void Start()
     {
-        
+        this.transform.GetComponent<EffectedCollision>().BoatAndBarrage();
     }
 
     void Update()

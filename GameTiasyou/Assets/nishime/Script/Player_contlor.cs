@@ -12,6 +12,7 @@ public class Player_contlor : MonoBehaviour
     private float Player3d_y;       //3dプレイヤーの高さの座標
     private Transform player_pos;   //プレイヤー位置変更に使う変数
     public float speed;              //プレイヤーの移動速度
+    public GameObject exprosion;// 爆発エフェクトオブジェクト
 
 
     //プレイヤーの横範囲
@@ -36,9 +37,8 @@ public class Player_contlor : MonoBehaviour
 
         boat = GameObject.Find("Boat_4");
 
-      
 
-        boatinit_z =boat.transform.position.z;
+          boatinit_z =boat.transform.position.z;
         //Debug.Log(Playera.name);
         //Debug.Log(Playera.transform.position);
 
@@ -121,10 +121,28 @@ public class Player_contlor : MonoBehaviour
     {
         if (collision.gameObject.tag == "danmaku")
         {
-            SceneManager.LoadScene("Result");
             //Destroy(this.gameObject);
+            
+            // 爆発する座標を指定
+            exprosion.transform.position = boat.transform.position;
+            // エフェクトを再生
+            Instantiate(exprosion, boat.transform.position, boat.transform.rotation, boat.transform);
+            // サイズを変更
+            exprosion.transform.localScale = new Vector3(0.1f, 0.1f, 0.1f);
+
+            // リザルトシーンへ移動
+            Invoke(nameof(GoResultScene), 1.2f);
         }
     }
+
+    /// <summary>
+    ///  リザルトシーンへ移動
+    /// </summary>
+    private void GoResultScene()
+    {
+        SceneManager.LoadScene("Result");
+    }
+
     //    //プレイヤー移動
     //    if (lsh > 0)
     //    {

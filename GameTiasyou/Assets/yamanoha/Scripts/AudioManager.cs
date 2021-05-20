@@ -13,7 +13,7 @@ public class AudioManager : MonoBehaviour
 
     void Start()
     {
-        VolumeSetting();
+        //VolumeSetting();
         if(!this.transform.CompareTag("MainCamera"))
             this.transform.gameObject.SetActive(false);
     }

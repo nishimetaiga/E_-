@@ -16197,6 +16197,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0.5
+  exprosion: {fileID: 100008, guid: 1dbc518224e49f34095aab42fe05751a, type: 3}
   haba_x: 70
   haba_z: 30
   rote: 0
