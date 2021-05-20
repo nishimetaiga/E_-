@@ -28,7 +28,7 @@ public class Bullet4 : MonoBehaviour
     /// <summary>
     /// 生成する弾の最大数
     /// </summary>
-    private const int sphereMax = 110;
+    private const int sphereMax = 45;
 
     /// <summary>
     /// 生成した弾の数
@@ -39,11 +39,6 @@ public class Bullet4 : MonoBehaviour
     /// 攻撃中か判断するフラグ
     /// </summary>
     bool atkFlg;
-
-    ///// <summary>
-    ///// 生成する弾のサイズを固定
-    ///// </summary>
-    //public Vector3 bulletSize;
 
     /// <summary>
     /// アクティブな弾の数
@@ -63,8 +58,7 @@ public class Bullet4 : MonoBehaviour
         // atkFlg の初期化
         atkFlg = false;
 
-        //// プール用オブジェクトの初期化
-        //bulletPool = new GameObject("BulletPool").transform;
+        activeCnt = 0;
 
         Bulletpool();
     }
@@ -75,13 +69,13 @@ public class Bullet4 : MonoBehaviour
     public void AttackControl()
     {
         // 弾幕のモーションを始動
-        if (atkFlg == false)
+        if (atkFlg == false && /*uroboros.GetComponent<Barrage_control>().backup_num*/4 == uroboros.GetComponent<Barrage_control>().barrage_num)
         {
-            uroboros.GetComponent<Barrage_control>().barrge_flg = false;
-            //BulletInit();
+            //uroboros.GetComponent<Barrage_control>().barrge_flg = false;
             StartCoroutine(GenerateSwirlBullet());
         }
-        StartCoroutine(MoveSphereBullet());
+        //StartCoroutine(MoveSphereBullet());
+        MoveSphereBullet();
     }
 
     /// <summary>
@@ -90,34 +84,23 @@ public class Bullet4 : MonoBehaviour
     /// <returns></returns>
     public IEnumerator GenerateSwirlBullet()
     {
-        //const float arc = Mathf.PI * 0.04f;     // 弾同士の弧
-        //float ringSize = spherePrefab.transform.localScale.x + 5;
             
         atkFlg = true;
-        if (/*atkFlg == false &&*/ activeCnt < sphereMax)
+        if (activeCnt < sphereMax)
         {
 
             for (int num = activeCnt; num < bulletList.Count; num++)
-            //while(activeCnt < bulletList.Count)
             {
-                //Debug.Log(bulletList.Count);
-                // 攻撃用オブジェクトの生成
-                //bullet = Instantiate(spherePrefab, new Vector3(uroboros.transform.position.x,
-                //    transform.position.y - 5, uroboros.transform.position.z), Quaternion.Euler(0, arc * (sphereNum), 0));
-                GetObject(num/*, spherePrefab, new Vector3(uroboros.transform.position.x,
-                    transform.position.y,
-                    uroboros.transform.position.z),
-                    Quaternion.Euler(0, arc * (sphereNum), 0)*/);
+                GetObject(num);
 
                 activeCnt++;
 
                 // 処理の間隔を 0.1 秒あける
                 yield return new WaitForSeconds(0.1f);
             }
+            uroboros.GetComponent<Barrage_control>().barrge_flg = true;
         }
 
-        // コルーチンの終了、次のコルーチンの呼び出し
-        //yield return StartCoroutine();
         yield break;
     }
 
@@ -125,22 +108,17 @@ public class Bullet4 : MonoBehaviour
     /// 弾を外側に向けて移動させる
     /// </summary>
     /// <returns></returns>
-    public IEnumerator MoveSphereBullet()
+    public /*IEnumerator*/ void MoveSphereBullet()
     {
         // 射程距離
         const int limitRange = 150;
         // 弾速
-        float bulletSpeed = 0.3f;
-
-        //int inactive = 0;    // 非アクティブのオブジェクトをカウントするのに使う
+        float bulletSpeed = 0.45f;
 
         for(var num = 0; num < bulletList.Count; num++)
-        //foreach (var obj in bulletList)
         {
             // オブジェクトがアクティブか判定
-            if (/*!*/bulletList[num].gameObject.activeSelf)
-            //inactive++;
-            //else
+            if (bulletList[num].gameObject.activeSelf)
             {
                 float arc = bulletList[num].transform.rotation.eulerAngles.y;
                 // オブジェクトを外側に向けて移動させる
@@ -148,7 +126,6 @@ public class Bullet4 : MonoBehaviour
                     = new Vector3(bulletList[num].transform.position.x + Mathf.Cos(arc) * bulletSpeed,
                     bulletList[num].transform.position.y,
                     bulletList[num].transform.position.z + Mathf.Sin(arc) * bulletSpeed);
-
 
                 // 一定以上の距離を移動したら非アクティブにする
                 var dis = Vector3.Distance(bulletList[num].transform.position, uroboros.transform.position);
@@ -159,77 +136,55 @@ public class Bullet4 : MonoBehaviour
                 }
             }
 
-
             // 1フレームずつ処理が行われる
-            yield return null;
+            //yield return null;
         }
-        // 全ての弾が非アクティブの場合に処理を抜ける
-        if (/*inactive*/bulletList.Count - activeCnt >= bulletList.Count)
-            // 攻撃が終了したオブジェクトを消去する
-            DeactivateBullet();
+        if (bulletList[bulletList.Count-1].gameObject.activeSelf)
+            //if (!bulletList[bulletList.Count/ 2].gameObject.activeSelf && bulletList[bulletList.Count / 2 +1].gameObject.activeSelf)
+            {
+            //uroboros.GetComponent<Barrage_control>().barrge_flg = true;
+            //uroboros.GetComponent<Barrage_control>().backup_num = uroboros.GetComponent<Barrage_control>().barrage_num;
 
-        yield break;
+        }
+
+            // 全ての弾が非アクティブの場合に処理を抜ける
+            if (bulletList.Count - activeCnt >= bulletList.Count)
+            // 攻撃が終了したオブジェクトを消去する
+            StartCoroutine(DeactivateBullet());
+
+        //yield break;
     }
 
     /// <summary>
     /// 生成した攻撃オブジェクトを消去する
     /// </summary>
     /// <returns></returns>
-    void DeactivateBullet()
+    IEnumerator DeactivateBullet()
     {
-        //// 使用済みのオブジェクトを破壊
-        //foreach (var obj in bulletList)
-        //{
-        //    Destroy(obj);
-        //}
-        //// リストのクリア
-        //bulletList.Clear();
-        //// 生成した弾のカウントをクリア
-        //sphereNum = 0;
         activeCnt = 0;
+
+        if (atkFlg)
+        {
+            // 指定時間後まで処理を飛ばす 
+            //yield return new WaitForSeconds(2.0f);
+            //uroboros.GetComponent<Barrage_control>().barrge_flg = true;
+            uroboros.GetComponent<Barrage_control>().backup_num = uroboros.GetComponent<Barrage_control>().barrage_num;
+        }
 
         atkFlg = false;
 
-        uroboros.GetComponent<Barrage_control>().barrge_flg = true;
+        yield break;
     }
 
-    void GetObject(int num/*, GameObject obj, Vector3 pos, Quaternion qua*/)
+    void GetObject(int num)
     {
-
-        //if (atkFlg == false)
-        //{
-            //オブジェが非アクティブならアクティブへ
-            if (!bulletList[num].gameObject.activeSelf)
-            {
-                //bulletList[num].transform.SetPositionAndRotation(pos, qua);
-                //bulletList[num].transform.SetPositionAndRotation(pos, bulletList[num].transform.localRotation);
-                bulletList[num].transform.position = uroboros.transform.position;
-                bulletList[num].gameObject.SetActive(true);//位置と回転を設定後、アクティブにする
-                return;
-            }
-            //// 余っているオブジェクトがなければ、生成する
-            //else if (sphereNum < sphereMax && atkFlg == false)
-            //{
-            //    //非アクティブなオブジェクトがないなら生成
-            //    bullet = Instantiate(obj, pos, qua, this.transform);//生成と同時にpoolを親に設定
-
-            //    // 生成した bullet の親オブジェクトにアタッチしているこのオブジェクトを指定
-            //    bullet.transform.SetParent(uroboros.transform, false);
-            //    //bullet.transform.parent = uroboros.transform;
-
-            //    // 生成したオブジェクトに InTheCamera スクリプトを追加
-            //    bullet.transform.gameObject.AddComponent<InTheCamera>().OnWillRenderObject();
-
-            //    // 作った弾をカウント
-            //    sphereNum++;
-
-            //    // 生成したオブジェクトの名付け
-            //    bullet.name = "bullet" + sphereNum;
-
-            //    // 生成した bullet をリスト化する
-            //    bulletList.Add(bullet);
-            //}
-        //}
+        //オブジェが非アクティブならアクティブへ
+        //if (!bulletList[num].gameObject.activeSelf)
+        {
+            bulletList[num].transform.position = uroboros.transform.position;
+            bulletList[num].gameObject.SetActive(true);//位置と回転を設定後、アクティブにする
+            return;
+        }
     }
 
     void Bulletpool()
@@ -253,7 +208,6 @@ public class Bullet4 : MonoBehaviour
 
             // 生成した bullet の親オブジェクトにアタッチしているこのオブジェクトを指定
             bullet.transform.SetParent(uroboros.transform, false);
-            //bullet.transform.parent = uroboros.transform;
 
             // 生成したオブジェクトに InTheCamera スクリプトを追加
             bullet.transform.gameObject.AddComponent<InTheCamera>().OnWillRenderObject();

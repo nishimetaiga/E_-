@@ -4,12 +4,10 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-public class Strat_Control : MonoBehaviour
+public class ResultScene : MonoBehaviour
 {
-
-
-    public Image strat_color;
-    public Image end_color;
+    public Image retry_color;
+    public Image title_color;
 
     private int select = 0;
 
@@ -47,13 +45,13 @@ public class Strat_Control : MonoBehaviour
 
         if (select == 0)
         {
-            strat_color.color = ap_max;
-            end_color.color = ap_alpha;
+            retry_color.color = ap_max;
+            title_color.color = ap_alpha;
         }
         else if (select == 1)
         {
-            strat_color.color = ap_alpha;
-            end_color.color = ap_max;
+            retry_color.color = ap_alpha;
+            title_color.color = ap_max;
         }
 
 
@@ -72,12 +70,7 @@ public class Strat_Control : MonoBehaviour
         }
         else if (select == 1)
         {
-#if UNITY_EDITOR
-            UnityEditor.EditorApplication.isPlaying = false;
-#else
-            Application.Quit();
-#endif
+            SceneManager.LoadScene("TitleScene");
         }
     }
-
 }

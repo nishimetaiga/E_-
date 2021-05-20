@@ -4,10 +4,12 @@ MonoImporter:
   externalObjects: {}
   serializedVersion: 2
   defaultReferences:
-  - menuUIPrefab: {instanceID: 0}
+  - menuUIPrefab: {fileID: 5637808243080581800, guid: f540e1a2a3baf1b4cbdba8298629a76b,
+      type: 3}
   - soundButtonPrefab: {fileID: 2560859196726802257, guid: f37eef8aabe48ec449e192defe48db33,
       type: 3}
-  - gameEndButtonPrefab: {instanceID: 0}
+  - gameEndButtonPrefab: {fileID: 6440814511769439910, guid: 9c990d80901e87049a3559637b7d19a8,
+      type: 3}
   - backButtonPrefab: {fileID: 2248297908188077544, guid: b9ef2c05cb46f7345bea23b22f115258,
       type: 3}
   executionOrder: 0
