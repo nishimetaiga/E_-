@@ -12,7 +12,6 @@ public class Player_contlor : MonoBehaviour
     private float Player3d_y;       //3dプレイヤーの高さの座標
     private Transform player_pos;   //プレイヤー位置変更に使う変数
     public float speed;              //プレイヤーの移動速度
-    public GameObject exprosion;// 爆発エフェクトオブジェクト
 
 
     //プレイヤーの横範囲
@@ -27,7 +26,10 @@ public class Player_contlor : MonoBehaviour
     public float rote_speed;   //回転のスピード
     public float rote_max;     //回転の限界値
 
-
+    
+    public GameObject exprosion;    // 爆発エフェクトオブジェクト
+    private AudioSource se_exp;     // 爆発音
+    bool expflg;                    // エフェクトやSEを管理するフラグ
 
 
     GameControl gc;
@@ -36,7 +38,8 @@ public class Player_contlor : MonoBehaviour
     {
 
         boat = GameObject.Find("Boat_4");
-
+        se_exp = this.transform.GetComponent<AudioSource>();
+        expflg = false;
 
           boatinit_z =boat.transform.position.z;
         //Debug.Log(Playera.name);
@@ -130,6 +133,13 @@ public class Player_contlor : MonoBehaviour
             // サイズを変更
             exprosion.transform.localScale = new Vector3(0.1f, 0.1f, 0.1f);
 
+            if (!expflg)
+            {
+                // SEを再生
+                se_exp.Play();
+                expflg = true;
+            }
+
             // リザルトシーンへ移動
             Invoke(nameof(GoResultScene), 1.2f);
         }
@@ -140,6 +150,7 @@ public class Player_contlor : MonoBehaviour
     /// </summary>
     private void GoResultScene()
     {
+        expflg = false;
         SceneManager.LoadScene("Result");
     }
 
