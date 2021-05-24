@@ -75,6 +75,20 @@
     <Compile Include="Assets\Game\C#\TitleScene.cs" />
     <Compile Include="Assets\Game\C#\fps.cs" />
     <Compile Include="Assets\Game\C#\se_test.cs" />
+    <Compile Include="Assets\JMO Assets\WarFX\Demo\Assets\CFX_AutoStopLoopedEffect.cs" />
+    <Compile Include="Assets\JMO Assets\WarFX\Demo\Assets\CFX_Demo_RandomDir.cs" />
+    <Compile Include="Assets\JMO Assets\WarFX\Demo\Assets\CFX_Demo_RotateCamera.cs" />
+    <Compile Include="Assets\JMO Assets\WarFX\Demo\Assets\CFX_Demo_Translate.cs" />
+    <Compile Include="Assets\JMO Assets\WarFX\Demo\Assets\WFX_Demo.cs" />
+    <Compile Include="Assets\JMO Assets\WarFX\Demo\Assets\WFX_Demo_DeleteAfterDelay.cs" />
+    <Compile Include="Assets\JMO Assets\WarFX\Demo\Assets\WFX_Demo_New.cs" />
+    <Compile Include="Assets\JMO Assets\WarFX\Demo\Assets\WFX_Demo_RandomDir.cs" />
+    <Compile Include="Assets\JMO Assets\WarFX\Demo\Assets\WFX_Demo_Wall.cs" />
+    <Compile Include="Assets\JMO Assets\WarFX\Scripts\CFX_AutoDestructShuriken.cs" />
+    <Compile Include="Assets\JMO Assets\WarFX\Scripts\CFX_LightIntensityFade.cs" />
+    <Compile Include="Assets\JMO Assets\WarFX\Scripts\WFX_BulletHoleDecal.cs" />
+    <Compile Include="Assets\JMO Assets\WarFX\Scripts\WFX_LightFlicker.cs" />
+    <Compile Include="Assets\JMO Assets\WarFX\Spawn System\CFX_SpawnSystem.cs" />
     <Compile Include="Assets\nishime\Script\GameControl.cs" />
     <Compile Include="Assets\nishime\Script\Pause_Control.cs" />
     <Compile Include="Assets\nishime\Script\Player_contlor.cs" />
@@ -96,6 +110,7 @@
     <Compile Include="Assets\yamanoha\Scripts\Bullet2.cs" />
     <Compile Include="Assets\yamanoha\Scripts\Bullet3.cs" />
     <Compile Include="Assets\yamanoha\Scripts\Bullet4.cs" />
+    <Compile Include="Assets\yamanoha\Scripts\EffectedCollision.cs" />
     <Compile Include="Assets\yamanoha\Scripts\GameEnd.cs" />
     <Compile Include="Assets\yamanoha\Scripts\InTheCamera.cs" />
     <Compile Include="Assets\yamanoha\Scripts\MenuScene.cs" />
@@ -103,15 +118,26 @@
     <Compile Include="Assets\yamanoha\Scripts\SetFPS.cs" />
     <Compile Include="Assets\yamanoha\Scripts\TestScript.cs" />
     <Compile Include="Assets\yamanoha\Scripts\UroborosAttackMothion.cs" />
+    <None Include="Assets\JMO Assets\WarFX\Shaders\WFX_S Multiply Soft.shader" />
+    <None Include="Assets\JMO Assets\WarFX\Shaders\WFX_S Multiply Soft Scroll.shader" />
     <None Include="Assets\oshiro\VRWaterShader2\Readme.txt" />
     <None Include="Assets\oshiro\VRWaterShader2\VRWaterShader(legacy)\Shaders\ZWrite Standard.shader" />
+    <None Include="Assets\JMO Assets\WarFX\_Effects\MuzzleFlashes\!MuzzleFlash Differences.txt" />
+    <None Include="Assets\JMO Assets\WarFX\Shaders\WFX_S Alpha-Specular TintColor.shader" />
+    <None Include="Assets\JMO Assets\WarFX\Shaders\WFX_S Add Scroll.shader" />
     <None Include="Assets\oshiro\VRWaterShader2\VRWaterShader(legacy)\Shaders\GLES30\ZWrite Standard.shader" />
+    <None Include="Assets\JMO Assets\Cartoon FX Easy Editor\CartoonFX Easy Editor Readme.txt" />
     <None Include="Assets\oshiro\AlignedGames\Polygonal Foliage Asset Package\Shaders\Diffuse.shader" />
+    <None Include="Assets\JMO Assets\WarFX\_Effects (Mobile)\MuzzleFlashes\!MuzzleFlash Differences.txt" />
+    <None Include="Assets\JMO Assets\WarFX\Shaders\WFX_S Particle Add A8.shader" />
     <None Include="Assets\oshiro\VRWaterShader2\Shaders\VRWSShadowCaster.cginc" />
+    <None Include="Assets\JMO Assets\WarFX\Shaders\WFX_S Smoke Scroll.shader" />
+    <None Include="Assets\JMO Assets\WarFX\Shaders\WFX_S Particle Multiply A8.shader" />
     <None Include="Assets\oshiro\VRWaterShader2\VRWaterShader(legacy)\Shaders\Standard.shader" />
     <None Include="Assets\oshiro\VRWaterShader2\VRWaterShader(legacy)\Readme_ja.txt" />
     <None Include="Assets\oshiro\Ultimate 10 Plus Shaders\Shaders\Ocean.shader" />
     <None Include="Assets\oshiro\VRWaterShader2\Shaders\Standard.shader" />
+    <None Include="Assets\JMO Assets\WarFX\Shaders\WFX_S AlphaBlend Scroll.shader" />
     <None Include="Assets\oshiro\VRWaterShader2\Shaders\VRWSCore.cginc" />
     <None Include="Assets\oshiro\VRWaterShader2\VRWaterShader(legacy)\Shaders\ZWrite Double Sided.shader" />
     <None Include="Assets\oshiro\VRWaterShader2\VRWaterShader(legacy)\Shaders\Double Sided.shader" />
@@ -122,8 +148,12 @@
     <None Include="Assets\nishime\2dgame\EffekseerForUnity153c\EffekseerForUnity153c\readme_LWRP.txt" />
     <None Include="Assets\nishime\Prefab\Boats\Read me.txt" />
     <None Include="Assets\oshiro\VRWaterShader2\Shaders\VRWSTess.cginc" />
+    <None Include="Assets\JMO Assets\WarFX\Shaders\WFX_S Particle AddSoft A8.shader" />
+    <None Include="Assets\JMO Assets\WarFX\!WarFX Readme.txt" />
+    <None Include="Assets\JMO Assets\WarFX\Shaders\WFX_S Alpha-Diffuse TintColor.shader" />
     <None Include="Assets\nishime\2dgame\EffekseerForUnity153c\EffekseerForUnity153c\readme_URP.txt" />
     <None Include="Assets\nishime\2dgame\EffekseerForUnity153c\EffekseerForUnity153c\readme_HDRP.txt" />
+    <None Include="Assets\JMO Assets\WarFX\Shaders\WFX_S AlphaBlend NoSoftParticles.shader" />
     <None Include="Assets\nishime\2dgame\EffekseerForUnity153c\EffekseerForUnity153c\readme.txt" />
     <None Include="Assets\oshiro\VRWaterShader2\VRWaterShader(legacy)\Readme.txt" />
     <Reference Include="UnityEngine">
@@ -655,43 +685,43 @@
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.18f1/Editor/Data/NetStandard/compat/2.0.0/shims/netfx/System.Xml.Serialization.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Timeline.Editor">
-      <HintPath>D:/game_B/GameTiasyou/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
+      <HintPath>C:/Users/nishime taiga/Desktop/ゲーム大賞/game_unity/GameTiasyou/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Cinemachine">
-      <HintPath>D:/game_B/GameTiasyou/Library/ScriptAssemblies/Cinemachine.dll</HintPath>
+      <HintPath>C:/Users/nishime taiga/Desktop/ゲーム大賞/game_unity/GameTiasyou/Library/ScriptAssemblies/Cinemachine.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VSCode.Editor">
-      <HintPath>D:/game_B/GameTiasyou/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
+      <HintPath>C:/Users/nishime taiga/Desktop/ゲーム大賞/game_unity/GameTiasyou/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
-      <HintPath>D:/game_B/GameTiasyou/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+      <HintPath>C:/Users/nishime taiga/Desktop/ゲーム大賞/game_unity/GameTiasyou/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UI">
-      <HintPath>D:/game_B/GameTiasyou/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+      <HintPath>C:/Users/nishime taiga/Desktop/ゲーム大賞/game_unity/GameTiasyou/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Timeline">
-      <HintPath>D:/game_B/GameTiasyou/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
+      <HintPath>C:/Users/nishime taiga/Desktop/ゲーム大賞/game_unity/GameTiasyou/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
     </Reference>
     <Reference Include="Unity.CollabProxy.Editor">
-      <HintPath>D:/game_B/GameTiasyou/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Rider.Editor">
-      <HintPath>D:/game_B/GameTiasyou/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="com.unity.cinemachine.editor">
-      <HintPath>D:/game_B/GameTiasyou/Library/ScriptAssemblies/com.unity.cinemachine.editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.TextMeshPro">
-      <HintPath>D:/game_B/GameTiasyou/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEditor.UI">
-      <HintPath>D:/game_B/GameTiasyou/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+      <HintPath>C:/Users/nishime taiga/Desktop/ゲーム大賞/game_unity/GameTiasyou/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Postprocessing.Editor">
-      <HintPath>D:/game_B/GameTiasyou/Library/ScriptAssemblies/Unity.Postprocessing.Editor.dll</HintPath>
+      <HintPath>C:/Users/nishime taiga/Desktop/ゲーム大賞/game_unity/GameTiasyou/Library/ScriptAssemblies/Unity.Postprocessing.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Rider.Editor">
+      <HintPath>C:/Users/nishime taiga/Desktop/ゲーム大賞/game_unity/GameTiasyou/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Postprocessing.Runtime">
-      <HintPath>D:/game_B/GameTiasyou/Library/ScriptAssemblies/Unity.Postprocessing.Runtime.dll</HintPath>
+      <HintPath>C:/Users/nishime taiga/Desktop/ゲーム大賞/game_unity/GameTiasyou/Library/ScriptAssemblies/Unity.Postprocessing.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="com.unity.cinemachine.editor">
+      <HintPath>C:/Users/nishime taiga/Desktop/ゲーム大賞/game_unity/GameTiasyou/Library/ScriptAssemblies/com.unity.cinemachine.editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.TextMeshPro">
+      <HintPath>C:/Users/nishime taiga/Desktop/ゲーム大賞/game_unity/GameTiasyou/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.UI">
+      <HintPath>C:/Users/nishime taiga/Desktop/ゲーム大賞/game_unity/GameTiasyou/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup></ItemGroup>

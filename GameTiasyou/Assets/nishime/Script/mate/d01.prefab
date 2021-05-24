@@ -107,7 +107,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9bac63bdf62df9f4292fe4eca6f3a834, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0.3
+  speed: 1
   dead_mx: 1000
   _dead: 0
   barrage: {fileID: 0}
@@ -122,5 +122,5 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.49999997
+  m_Radius: 0.4
   m_Center: {x: 0, y: 0, z: 0}

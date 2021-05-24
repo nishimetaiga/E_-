@@ -16,9 +16,14 @@ public class GameControl : MonoBehaviour
     private GameObject pose_c;
     private bool flg_button7 = false;
 
+    public int FPS;
 
     private void Start()
     {
+
+
+        
+
         //ボートのオブジェクトのインスペクターのデータ入手
         boat = GameObject.Find("Boat_4");
 
@@ -33,7 +38,8 @@ public class GameControl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        Application.targetFrameRate = FPS;
+        Debug.Log(Application.targetFrameRate);
         if (Input.GetKeyDown("joystick button 7")&&flg_button7==false)
         {
             pose_c.SetActive(true);
