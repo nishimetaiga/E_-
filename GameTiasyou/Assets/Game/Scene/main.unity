@@ -308,7 +308,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6400000, guid: 10e1d640713d3714f907eb29b3fa1199, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 10e1d640713d3714f907eb29b3fa1199, type: 3}
@@ -1608,7 +1608,7 @@ GameObject:
   - component: {fileID: 1048727004}
   - component: {fileID: 1048727003}
   m_Layer: 0
-  m_Name: Particle System (2)
+  m_Name: Splash03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6362,7 +6362,7 @@ GameObject:
   - component: {fileID: 1078163682}
   - component: {fileID: 1078163681}
   m_Layer: 0
-  m_Name: Particle System
+  m_Name: Splash01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11498,7 +11498,7 @@ GameObject:
   - component: {fileID: 1339599390}
   - component: {fileID: 1339599389}
   m_Layer: 0
-  m_Name: Particle System (1)
+  m_Name: Splash02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -16346,6 +16346,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28c857581d0e54f4a965d24b5eb40dec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Splash:
+  - {fileID: 1078163680}
+  - {fileID: 1339599388}
+  - {fileID: 1048727002}
   speed: 0.5
   haba_x: 70
   haba_z: 30
