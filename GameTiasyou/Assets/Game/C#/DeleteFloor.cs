@@ -4,15 +4,13 @@ using UnityEngine;
 
 public class DeleteFloor : MonoBehaviour
 {
+    //座標取得用変数
     private Vector3 tmp;
+    //オブジェクト情報格納用変数
     public GameObject FloorObj;
-    //private void Start()
-    //{
-    //    tmp = this.transform.position;
-    //}
      void Update()
     {
-
+        //座標取得取得
         tmp = this.transform.position;
     }
     private void OnTriggerEnter(Collider other)
@@ -23,14 +21,13 @@ public class DeleteFloor : MonoBehaviour
         {
             //確認用
             //Debug.Log("すり抜けた！");
-            //Instantiate(FloorObj, new Vector3(tmp.x, tmp.y, tmp.z - 49.0F), Quaternion.identity);
-            //Instantiate(FloorObj, new Vector3(tmp.x, tmp.y, tmp.z + 49.0F), Quaternion.identity);
+            //オブジェクトを生成する
             Instantiate(FloorObj, new Vector3(tmp.x, tmp.y, tmp.z + 149.6F), Quaternion.identity);
         }
     }
     private void OnTriggerExit(Collider other)
     {
-        //タグが　Player　のオブジェクトが触れたときに処理が行われる
+        //タグが　Player　のオブジェクトが離れたときに処理が行われる
         //オブジェクトを消す処理
         if (other.gameObject.tag == "Player")
         {
