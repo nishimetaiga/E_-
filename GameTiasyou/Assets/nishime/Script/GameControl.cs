@@ -20,6 +20,8 @@ public class GameControl : MonoBehaviour
 
     private void Start()
     {
+        Application.targetFrameRate = FPS;
+        Debug.Log(Application.targetFrameRate);
 
 
         
@@ -38,8 +40,6 @@ public class GameControl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Application.targetFrameRate = FPS;
-        Debug.Log(Application.targetFrameRate);
         if (Input.GetKeyDown("joystick button 7")&&flg_button7==false)
         {
             pose_c.SetActive(true);
