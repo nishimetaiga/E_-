@@ -18,7 +18,8 @@ public class TimeBar : MonoBehaviour
     void Start()
     {
         //制限時間を格納
-        time = 30f;
+        //30f　＝　30秒　60f = 60秒
+        time = 180f;
         //計算用に制限時間を格納
         time2 = time;
         //Slider情報を格納
