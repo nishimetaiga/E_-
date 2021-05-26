@@ -27,9 +27,9 @@ public class Barrage_control : MonoBehaviour
         //ボートのオブジェクトのインスペクターのデータ入手
         barrage = GameObject.Find("Barrage");
 
-       barrage_num = Random.Range(0, 4);
-        backup_num = barrage_num;
-        // barrage_num = Random.Range(1);
+        barrage_num = Random.Range(0, 4);
+        barrage_num = 2;
+          backup_num = barrage_num;
     }
 
 
@@ -50,7 +50,8 @@ public class Barrage_control : MonoBehaviour
             {
                 barrge_flg = false;
                 barrage_num = Random.Range(0, 4);
-                
+                //barrage_num = 1;
+
                 //if (barrage_num == backup_num)
                 //{
                 //    backup_num = barrage_num;

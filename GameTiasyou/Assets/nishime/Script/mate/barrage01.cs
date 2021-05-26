@@ -9,20 +9,25 @@ public class barrage01 : MonoBehaviour
 
     public GameObject barrage;
 
-    private bool seisei = true;
+    private bool seisei;
 
 
     private int des;
     public int _des;
 
     public int obj_count;
-    public int count = 0;
-    public int dead_count = 0;
+    public int count;
+    public int dead_count;
 
     private void Start()
     {
+        seisei = true;
+
         barrage = GameObject.Find("Barrage");
         obj_count = 0;
+
+        count = 0;
+        dead_count = 0;
     }
 
     //弾幕の処理管理関数

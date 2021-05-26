@@ -59,11 +59,12 @@ public class barrage02 : MonoBehaviour
         {
             if (seisei == true)
             {
-                for (int i = 0; i < 5; i++)
+                for (int i = 0; i < 8; i++)
                 {
                     //生成
-                    danmaku02.Add(Instantiate(d2, new Vector3((barrage.transform.position.x - 40) + 20 * i, barrage.transform.position.y, barrage.transform.position.z),
+                    danmaku02.Add(Instantiate(d2, new Vector3((barrage.transform.position.x - 60) + 20 * i, barrage.transform.position.y, barrage.transform.position.z),
                                                   Quaternion.Euler(0, 0, 0)));
+                    
 
                     obj_count++;
                 }

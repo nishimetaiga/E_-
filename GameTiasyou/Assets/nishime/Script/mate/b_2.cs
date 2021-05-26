@@ -31,15 +31,18 @@ public class b_2 : MonoBehaviour
     {
         //barrage = GameObject.Find("Barrage");
       boat = GameObject.Find("Boat_4");
-        if (boat.transform.position.z - 20 < transform.position.z)
-        {
-            flg = false;
+        //if (boat.transform.position.z - 20 < transform.position.z)
+        //{
+        //    flg = false;
 
-        }
+        //}
 
         if (flg == true)
         {
-            transform.LookAt(boat.transform);
+            var target = new Vector3(boat.transform.position.x, boat.transform.position.y, 19);
+            
+            transform.LookAt(target);
+            flg = false;
         }
         transform.position += transform.forward * speed;
 

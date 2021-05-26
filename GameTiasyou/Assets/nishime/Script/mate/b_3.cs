@@ -13,7 +13,7 @@ public class b_3 : MonoBehaviour
     private int _de;
 
     public float nerai;
-    public bool flg=true;
+    public bool flg = true;
 
 
     private GameObject barrage;
@@ -22,7 +22,7 @@ public class b_3 : MonoBehaviour
     private void Start()
     {
         flg = true;
-        barrage= GameObject.Find("Barrage");
+        barrage = GameObject.Find("Barrage");
         boat = GameObject.Find("Boat_4");
     }
     // Update is called once per frame
@@ -32,15 +32,23 @@ public class b_3 : MonoBehaviour
         barrage = GameObject.Find("Barrage");
         boat = GameObject.Find("Boat_4");
 
-        if (flg == true || transform.position.z < -18)
+        //if (flg == true || transform.position.z < -18)
+        //{
+        //    transform.LookAt(boat.transform);
+        //    flg = false;
+        //}     
+
+
+        if (flg == true)
         {
             transform.LookAt(boat.transform);
             flg = false;
         }
 
+
         transform.position += transform.forward * speed;
 
-        
+
 
 
         _de++;

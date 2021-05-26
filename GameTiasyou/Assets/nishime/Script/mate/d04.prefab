@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 3123843008657856844}
   - component: {fileID: 3123843008657856845}
   - component: {fileID: -7400650345263212211}
+  - component: {fileID: 6305781823021960057}
   m_Layer: 8
   m_Name: d04
   m_TagString: danmaku
@@ -90,7 +91,7 @@ BoxCollider:
   m_GameObject: {fileID: 3123843008657856846}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
@@ -110,3 +111,17 @@ MonoBehaviour:
   de: 1000
   nerai: 0
   flg: 1
+--- !u!64 &6305781823021960057
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3123843008657856846}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}

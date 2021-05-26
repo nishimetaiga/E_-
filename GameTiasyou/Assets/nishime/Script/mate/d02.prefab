@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 3123843008657856842}
   - component: {fileID: 3123843008657856843}
   - component: {fileID: 3123843008657856844}
-  - component: {fileID: 3123843008657856845}
   - component: {fileID: -6074235793280424569}
+  - component: {fileID: 6486888634383393579}
   m_Layer: 8
   m_Name: d02
   m_TagString: danmaku
@@ -29,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 3123843008657856846}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.0000009536743, y: 1.999999, z: -37.1}
-  m_LocalScale: {x: 2.6, y: 5.5322247, z: 4.81}
+  m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -81,19 +81,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!65 &3123843008657856845
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3123843008657856846}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &-6074235793280424569
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -112,3 +99,16 @@ MonoBehaviour:
   flg: 0
   barrage: {fileID: 0}
   boat: {fileID: 0}
+--- !u!135 &6486888634383393579
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3123843008657856846}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Center: {x: 0, y: 0, z: 0}

@@ -376,7 +376,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 63987750}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -79.1, y: 1.6, z: -10.5}
+  m_LocalPosition: {x: 0.1, y: 1.6, z: 19.9}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -980,7 +980,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   d2: {fileID: 3123843008657856846, guid: b6f92a646c8a9c543a34dbeecfa22628, type: 3}
   danmaku02: []
-  _des: 100
+  _des: 20
   count: 0
   obj_count: 0
   dead_count: 0
@@ -1001,7 +1001,7 @@ MonoBehaviour:
   count: 0
   obj_count: 0
   dead_count: 0
-  _des: 95
+  _des: 40
 --- !u!114 &642298461
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1016,7 +1016,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   d2: {fileID: 3123843008657856846, guid: 2eca7046f13292d4e8c49b55ea542fe0, type: 3}
   danmaku04: []
-  _des: 300
+  _des: 100
   count: 0
   obj_count: 0
   dead_count: 0

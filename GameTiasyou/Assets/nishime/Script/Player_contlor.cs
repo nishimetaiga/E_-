@@ -97,13 +97,14 @@ public class Player_contlor : MonoBehaviour
             if (boat.transform.position.z < haba_z + boatinit_z)
             {
 
-                Debug.Log(boatinit_z);
+                
                 boat.transform.position += new Vector3(0f, 0f, 1 * speed);
             }
 
         }
         else if (lsv < 0)
         {
+          
             if (boat.transform.position.z > -haba_z + boatinit_z)
             {
 

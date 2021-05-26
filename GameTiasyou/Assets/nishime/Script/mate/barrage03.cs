@@ -65,7 +65,7 @@ public class barrage03 : MonoBehaviour
                 obj_count++;
                 count++;
             }
-            if (count == 6)
+            if (count == 500)
             {
                 count = 0;
                 barrage.GetComponent<Barrage_control>().barrge_flg = true;
