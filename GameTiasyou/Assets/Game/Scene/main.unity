@@ -16320,6 +16320,19 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 39147399}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1465112414
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1465112413}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d863e32491b31844b43f583d090c203, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  exprosion: {fileID: 100008, guid: 1dbc518224e49f34095aab42fe05751a, type: 3}
 --- !u!136 &1465112415
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -16356,7 +16369,6 @@ MonoBehaviour:
   rote: 0
   rote_speed: 1
   rote_max: 30
-  exprosion: {fileID: 100008, guid: 1dbc518224e49f34095aab42fe05751a, type: 3}
 --- !u!82 &1465112419
 AudioSource:
   m_ObjectHideFlags: 0
