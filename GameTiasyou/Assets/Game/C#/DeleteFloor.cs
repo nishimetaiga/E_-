@@ -4,37 +4,39 @@ using UnityEngine;
 
 public class DeleteFloor : MonoBehaviour
 {
+
+    //カウント
+    private int DeleteCount;
+    private int Count;
     //座標取得用変数
     private Vector3 tmp;
     //オブジェクト情報格納用変数
     public GameObject FloorObj;
-     void Update()
+    // Start is called before the first frame update
+    void Start()
+    {
+        //カウントリセット
+        DeleteCount = 0;
+        Count = 0;
+    }
+
+    // Update is called once per frame
+    void Update()
     {
         //座標取得取得
         tmp = this.transform.position;
-    }
-    private void OnTriggerEnter(Collider other)
-    {
-        //タグが　Player　のオブジェクトが触れたときに処理が行われる
-        //オブジェクトを出す処理
-        if (other.gameObject.tag == "Player")
-        {
-            //確認用
-            //Debug.Log("すり抜けた！");
-            //オブジェクトを生成する
-            Instantiate(FloorObj, new Vector3(tmp.x, tmp.y, tmp.z + 149.6F), Quaternion.identity);
-        }
-    }
-    private void OnTriggerExit(Collider other)
-    {
-        //タグが　Player　のオブジェクトが離れたときに処理が行われる
-        //オブジェクトを消す処理
-        if (other.gameObject.tag == "Player")
-        {
-            //確認用
-            //Debug.Log("通り抜けた！");
-            Destroy(gameObject);
-        }
 
+        //生成のタイミング：このオブジェクトのZが40より小さいときかつカウントが0の時
+        if (tmp.z < 40 && Count == 0)
+        {// X.0 Y.0 Z.190 の位置にオブジェクトを生成する。カウントを1にする
+            Instantiate(FloorObj, new Vector3(0, 0, 190), Quaternion.identity);
+            Count = 1;
+        }
+        //削除のタイミング：このオブジェクトのZが-150のより大きいときかつ削除カウントが0の時
+        if (tmp.z < -150 && DeleteCount == 0)
+        {//削除処理。削除カウントを１にする
+            Destroy(gameObject);
+            DeleteCount = 1;
+        }
     }
 }
